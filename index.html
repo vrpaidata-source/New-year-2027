@@ -1,130 +1,110 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta name="theme-color" content="#080706">
 
-<title>VRPAIData | Happy New Year 2027</title>
+<title>Happy New Year 2027 | VRPAIData</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="🎆 Happy New Year 2027 | VRPAIData">
-<meta property="og:description" content="✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! Wishing You Happiness, Love & Success in 2027!">
-<meta property="og:image" content="https://YOUR-DOMAIN/newyear2027-preview.jpg">
+<meta property="og:description" content="✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! Wishing You Happiness, Love & Success! ❤️">
+<meta property="og:image" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
  width:100%;height:100%;overflow:hidden;
- background:#050403;color:#ffe4a0;
+ background:#050403;color:#ffe5a5;
  font-family:Arial,sans-serif;
  overscroll-behavior:none;
 }
-body{
- display:flex;align-items:center;justify-content:center;
-}
+body{display:flex;align-items:center;justify-content:center}
 #app{
- position:relative;
  width:min(100vw,56.25svh);
  height:min(100svh,177.7778vw);
  aspect-ratio:9/16;
- overflow:hidden;
- background:
- radial-gradient(ellipse at 50% 35%,#38240d 0%,#100c07 48%,#030303 100%);
- border:1px solid #a98237;
+ position:relative;overflow:hidden;
+ background:radial-gradient(ellipse at 50% 35%,#35220b,#100b05 55%,#030303);
+ border:1px solid #a77b30;
 }
 #main{
  position:absolute;inset:0;
  display:flex;flex-direction:column;
- align-items:center;justify-content:space-around;
- padding:5% 6%;
+ justify-content:space-around;align-items:center;
+ padding:5%;
  text-align:center;
 }
 .logo{
- color:#f9d77b;font-size:clamp(16px,4vw,23px);
- font-weight:900;letter-spacing:4px;
- text-shadow:0 0 15px #e5ad38;
+ color:#ffdf8b;font-size:23px;font-weight:bold;
+ letter-spacing:4px;text-shadow:0 0 15px #d69a35;
 }
-.small{font-size:9px;letter-spacing:4px;color:#b89b60;margin-top:5px}
-.title{
- font-family:Georgia,serif;
- font-size:clamp(28px,8vw,48px);
- color:#fce4a2;
- text-shadow:0 0 20px #d69a35;
-}
+.small{font-size:9px;letter-spacing:3px;color:#b99a5c;margin-top:6px}
+.title{font:clamp(28px,8vw,45px) Georgia;color:#ffe8b1}
 .year{
- font-family:Georgia,serif;
- font-size:clamp(70px,21vw,112px);
- font-weight:bold;
- line-height:1;
- background:linear-gradient(#fff4b6,#dca43d,#fff0a5);
- -webkit-background-clip:text;
- background-clip:text;color:transparent;
- filter:drop-shadow(0 0 15px #c48a27);
+ font: bold clamp(76px,21vw,110px) Georgia;
+ line-height:1.1;
+ color:#f9d77d;
+ text-shadow:0 0 12px #d69a35,0 0 35px #b27a21;
 }
-.subtitle{font-size:12px;line-height:1.7;color:#ddc99e}
-.countTitle{font-size:10px;letter-spacing:3px;color:#e8c87e}
-.timer{display:flex;gap:5px;justify-content:center;width:100%}
+.sub{font-size:12px;line-height:1.8;color:#dfc99a}
+.timer{display:flex;gap:5px;width:100%}
 .unit{
- flex:1;min-width:0;padding:10px 2px;
- background:linear-gradient(145deg,#2a1c0b,#090704);
- border:1px solid #9b742e;border-radius:9px;
+ flex:1;padding:10px 2px;
+ border:1px solid #99732e;border-radius:9px;
+ background:#1b1309;
 }
-.unit b{display:block;font-size:clamp(19px,5vw,27px);color:#ffe5a0}
-.unit span{font-size:8px;letter-spacing:1px;color:#bca16a}
+.unit b{display:block;font-size:23px;color:#ffe4a1}
+.unit span{font-size:8px;color:#bba16b;letter-spacing:1px}
+.label{font-size:10px;letter-spacing:3px;margin-bottom:9px}
 .panel{
  width:100%;padding:12px;
- border:1px solid #94702d;border-radius:13px;
- background:#130e08dd;
+ border:1px solid #96702f;border-radius:13px;
+ background:#150f08;
 }
-.panelTitle{font-family:Georgia;font-size:16px;margin-bottom:8px;color:#ffe3a0}
+.panel h3{font:17px Georgia;color:#ffe3a0;margin-bottom:8px}
 input,textarea{
- width:100%;background:#080705;
- border:1px solid #8c692d;border-radius:7px;
- padding:11px;color:#fff0c3;
- font-size:12px;outline:none;margin:4px 0;
+ display:block;width:100%;margin:5px 0;
+ padding:11px;border:1px solid #896629;
+ border-radius:7px;background:#080705;
+ color:#ffe7ad;font-size:12px;outline:none;
 }
-textarea{height:63px;resize:none}
+textarea{height:65px;resize:none;line-height:1.5}
 button{
- border:0;border-radius:30px;padding:12px 18px;
- background:linear-gradient(100deg,#a87520,#ffe8a4,#bc862d);
- color:#170f03;font-weight:bold;font-size:12px;
+ padding:12px 18px;border:0;border-radius:30px;
+ background:linear-gradient(90deg,#a87520,#ffe9a8,#b27c23);
+ color:#160e03;font-size:12px;font-weight:bold;
 }
-.send{width:100%;margin-top:6px}
-.footer{font-size:9px;color:#a78d58;letter-spacing:2px}
+.send{width:100%;margin-top:5px}
+.footer{font-size:9px;letter-spacing:2px;color:#a88b55}
 
-/* Opening animation */
+/* 7 SECOND WELCOME SHOW */
 #intro{
- position:absolute;inset:0;z-index:10;
- background:radial-gradient(ellipse at center,#1b1208,#020202 75%);
- display:none;overflow:hidden;
+ position:absolute;inset:0;z-index:20;
+ display:none;background:#030201;
 }
-#intro.show{display:block}
-#sky{position:absolute;inset:0;width:100%;height:100%}
+#intro.active{display:block}
+#sky{width:100%;height:100%;position:absolute;inset:0}
 #introText{
- position:absolute;left:5%;right:5%;top:43%;
- transform:translateY(30px);
- opacity:0;text-align:center;
- animation:textIn .8s ease .5s forwards;
+ position:absolute;top:40%;left:5%;width:90%;
+ text-align:center;opacity:0;
+ animation:reveal .8s ease .4s forwards;
 }
-@keyframes textIn{
- to{opacity:1;transform:translateY(0)}
+@keyframes reveal{
+ to{opacity:1;transform:translateY(-10px)}
 }
-.introYear{
- font-family:Georgia;font-size:clamp(45px,14vw,75px);
- color:#ffdf8c;text-shadow:0 0 25px #e9ad3d;
+#introText h1{
+ font:clamp(48px,14vw,76px) Georgia;
+ color:#ffdf8b;text-shadow:0 0 25px #d99a2d;
 }
-.introWish{
- font-family:Georgia;font-size:18px;
- color:#fff0c0;line-height:1.6;margin-top:12px;
+#introText .wish{
+ font:17px Georgia;line-height:1.7;
+ color:#fff0c7;margin-top:12px;
  overflow-wrap:anywhere;
 }
-.introSender{font-size:13px;color:#e9c67c;margin-top:14px}
-#skip{
- position:absolute;bottom:5%;right:5%;
- border:1px solid #b68c43;border-radius:20px;
- background:#100b07;color:#f8d98d;
- font-size:10px;padding:8px 14px;
+#introText .from{
+ color:#e7c57c;font-size:13px;margin-top:17px;
 }
 </style>
 </head>
@@ -132,7 +112,7 @@ button{
 <body>
 <div id="app">
 
-<!-- MAIN PAGE -->
+<!-- FIRST PAGE -->
 <main id="main">
 
  <header>
@@ -143,15 +123,15 @@ button{
  <section>
   <div class="title">Happy New Year</div>
   <div class="year">2027</div>
-  <p class="subtitle">
+  <div class="sub">
    புதிய நம்பிக்கை • புதிய கனவுகள்<br>
-   A Beautiful New Beginning ❤️
-  </p>
+   A New Beginning ❤️
+  </div>
  </section>
 
  <section style="width:100%">
-  <div class="countTitle">NEW YEAR COUNTDOWN</div>
-  <div class="timer" style="margin-top:10px">
+  <div class="label">NEW YEAR COUNTDOWN</div>
+  <div class="timer">
    <div class="unit"><b id="days">00</b><span>DAYS</span></div>
    <div class="unit"><b id="hours">00</b><span>HOURS</span></div>
    <div class="unit"><b id="minutes">00</b><span>MINUTES</span></div>
@@ -160,191 +140,179 @@ button{
  </section>
 
  <section class="panel">
-  <div class="panelTitle">💌 Send Your Wishes</div>
+  <h3>💌 Send Your Wishes</h3>
+  <input id="sender" placeholder="Sender Name / அனுப்புநர் பெயர்">
 
-  <input id="sender" placeholder="அனுப்புநர் பெயர் / Sender Name">
-
-  <textarea id="wish">🪔 இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️
-
-உங்கள் வாழ்க்கையில் மகிழ்ச்சி பெருகட்டும்.
-நினைத்த கனவுகள் அனைத்தும் நனவாகட்டும்.
-ஆரோக்கியம், அன்பு, அமைதி என்றும் நிலைத்திருக்கட்டும்!
-
-✨ Happy New Year 2027!
-Wishing You Love, Happiness & Success!</textarea>
+  <textarea id="wish">✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️
+Wishing You Happiness, Love & Success in 2027!</textarea>
 
   <button class="send" onclick="sendWish()">
    🎁 SEND WISHES
   </button>
-  <div id="status" style="font-size:10px;margin-top:7px;color:#e5c77e"></div>
+  <div id="status" style="font-size:10px;margin-top:7px"></div>
  </section>
 
- <footer class="footer">
-  WITH LOVE ❤️ VRPAIData
- </footer>
-
+ <footer class="footer">WITH LOVE ❤️ VRPAIData</footer>
 </main>
 
-<!-- RECEIVER OPENING ANIMATION -->
+<!-- RECEIVER ANIMATION -->
 <div id="intro">
  <canvas id="sky"></canvas>
-
  <div id="introText">
-  <div style="font-size:13px;letter-spacing:3px;color:#e9c67c">
+  <div style="font-size:11px;letter-spacing:3px;color:#e9c77c">
    A SPECIAL WISH FOR YOU
   </div>
-  <div class="introYear">2027</div>
-  <div class="introWish" id="showWish"></div>
-  <div class="introSender" id="showSender"></div>
+  <h1>2027</h1>
+  <div class="wish" id="showWish"></div>
+  <div class="from" id="showSender"></div>
  </div>
-
- <button id="skip" onclick="finishIntro()">SKIP ✕</button>
 </div>
 
 </div>
 
 <script>
+// DEFAULT WISH
+const defaultWish =
+"✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️\nWishing You Happiness, Love & Success in 2027!";
+
 // COUNTDOWN
-function timer(){
+function updateTimer(){
  const target=new Date("2027-01-01T00:00:00+05:30").getTime();
- let t=Math.max(0,target-Date.now());
+ const t=Math.max(0,target-Date.now());
 
- document.getElementById("days").textContent=
- String(Math.floor(t/86400000)).padStart(2,"0");
- document.getElementById("hours").textContent=
- String(Math.floor(t%86400000/3600000)).padStart(2,"0");
- document.getElementById("minutes").textContent=
- String(Math.floor(t%3600000/60000)).padStart(2,"0");
- document.getElementById("seconds").textContent=
- String(Math.floor(t%60000/1000)).padStart(2,"0");
+ days.textContent=String(Math.floor(t/86400000)).padStart(2,"0");
+ hours.textContent=String(Math.floor(t%86400000/3600000)).padStart(2,"0");
+ minutes.textContent=String(Math.floor(t%3600000/60000)).padStart(2,"0");
+ seconds.textContent=String(Math.floor(t%60000/1000)).padStart(2,"0");
 }
-timer();
-setInterval(timer,1000);
+updateTimer();
+setInterval(updateTimer,1000);
 
-// GENERATE PERSONAL WISH LINK
+// SEND PROFESSIONAL WHATSAPP MESSAGE
 function sendWish(){
  const name=document.getElementById("sender").value.trim();
  const message=document.getElementById("wish").value.trim();
 
  if(!name){
-  alert("அனுப்புநர் பெயரை உள்ளிடவும்!");
+  alert("Please enter Sender Name!");
   return;
  }
 
+ // Short link for default wish
  const url=new URL(location.href);
  url.search="";
+ url.hash="";
  url.searchParams.set("sender",name);
- url.searchParams.set("wish",message);
+
+ if(message===defaultWish){
+  url.searchParams.set("wish","default");
+ }else{
+  url.searchParams.set("wish",message);
+ }
 
  const link=url.toString();
 
- const shareText=
- "🎆 Happy New Year 2027! 🎆\n\n"+
- "உங்களுக்காக ஒரு அன்பான புத்தாண்டு வாழ்த்து! ❤️\n\n"+
- link;
+ // Short, professional WhatsApp content
+ const text=
+ "🎆 Happy New Year 2027!\n"+
+ "💌 From: "+name+"\n\n"+
+ message+"\n\n"+
+ "✨ Open Your Wishes:\n"+link;
 
- if(navigator.share){
-  navigator.share({
-   title:"Happy New Year 2027",
-   text:shareText,
-   url:link
-  }).catch(()=>{});
- }else{
-  window.open(
-   "https://wa.me/?text="+encodeURIComponent(shareText),
-   "_blank"
-  );
- }
+ const whatsapp="https://wa.me/?text="+encodeURIComponent(text);
 
- document.getElementById("status").textContent=
- "❤️ உங்கள் வாழ்த்து Share செய்யத் தயாராக உள்ளது!";
+ document.getElementById("status").textContent="Opening WhatsApp...";
+ location.href=whatsapp;
 }
 
-// FIREWORKS ENGINE
+// FIREWORKS
 const canvas=document.getElementById("sky");
 const ctx=canvas.getContext("2d");
-let W=0,H=0,particles=[],rockets=[];
-let animationActive=false;
+let W,H,particles=[],rockets=[];
+let running=false;
+let raf=0;
+let launchTimers=[];
 
 function resize(){
- const dpr=Math.min(devicePixelRatio||1,2);
+ const d=Math.min(devicePixelRatio||1,2);
  W=canvas.clientWidth;
  H=canvas.clientHeight;
- canvas.width=W*dpr;
- canvas.height=H*dpr;
- ctx.setTransform(dpr,0,0,dpr,0,0);
+ canvas.width=W*d;
+ canvas.height=H*d;
+ ctx.setTransform(d,0,0,d,0,0);
 }
 resize();
-window.addEventListener("resize",resize);
 
-function rocket(){
- rockets.push({
-  x:W*(.12+Math.random()*.76),
-  y:H+10,
-  target:H*(.12+Math.random()*.35),
-  speed:7+Math.random()*5,
-  hue:Math.random()*360
- });
-}
+// 13 FIREWORKS STYLES
+function explode(x,y,type){
+ const total=type===12?110:75;
+ const hue=[45,190,280,0,120,320,55,210,25,160,300,80,15][type];
 
-// 13 DISTINCT FIREWORK STYLES
-function burst(x,y,type,hue){
- const count=type===12?110:65;
+ for(let i=0;i<total;i++){
+  let a=Math.PI*2*i/total;
+  let speed=2+Math.random()*3;
 
- for(let i=0;i<count;i++){
-  let angle=Math.PI*2*i/count;
-  let speed=2+Math.random()*3.5;
-  let vx=Math.cos(angle)*speed;
-  let vy=Math.sin(angle)*speed;
+  let vx=Math.cos(a)*speed;
+  let vy=Math.sin(a)*speed;
 
+  // Different shapes
   switch(type){
-   case 0: break; // Circle
-   case 1: speed=3; break; // Chrysanthemum
-   case 2: speed=i%2?4:1.5; break; // Star
-   case 3: speed=2+Math.random()*6; break; // Peony
-   case 4: vx*=.5;vy*=1.6;break; // Willow
-   case 5: vx*=1.5;vy*=.7;break; // Ring
-   case 6: speed=i%3?2:5;break; // Multi-layer
-   case 7: angle=Math.PI*2*(Math.floor(i/5)/13);break;
-   case 8: vx=Math.cos(angle)*speed*1.5;break;
-   case 9: vy=Math.sin(angle)*speed*1.5;break;
-   case 10: speed=4+Math.sin(i)*2;break;
-   case 11: speed=2+Math.random()*7;break;
-   case 12: speed=1+Math.random()*6;break;
+   case 0: break; // Round chrysanthemum
+   case 1: speed=4;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 2: speed=i%2?5:1.5;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 3: vx*=.5;vy*=1.8;break;
+   case 4: vx*=1.7;vy*=.7;break;
+   case 5: speed=2+Math.random()*6;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 6: speed=i%3===0?6:2;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 7: a=Math.PI*2*Math.floor(i/5)/15;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 8: vx=Math.cos(a)*speed*1.5;vy=Math.sin(a)*speed*.6;break;
+   case 9: vx=Math.cos(a)*speed*.6;vy=Math.sin(a)*speed*1.5;break;
+   case 10: speed=3+Math.sin(i*4)*2;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 11: speed=1+Math.random()*7;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
+   case 12: speed=2+Math.random()*5;vx=Math.cos(a)*speed;vy=Math.sin(a)*speed;break;
   }
 
   particles.push({
-   x,y,vx,vy,life:1,
-   decay:.009+Math.random()*.013,
-   size:1+Math.random()*2.5,
-   hue:hue+Math.random()*35,
-   type
+   x,y,vx,vy,
+   life:1,
+   decay:.009+Math.random()*.01,
+   hue:hue+Math.random()*30,
+   size:1+Math.random()*2.2
   });
  }
 }
 
-function animate(){
- if(!animationActive)return;
+// ROCKET FROM BOTTOM TO SKY
+function launch(type){
+ rockets.push({
+  x:W*(.12+Math.random()*.76),
+  y:H+5,
+  target:H*(.12+Math.random()*.36),
+  speed:7+Math.random()*4,
+  type
+ });
+}
+
+function draw(){
+ if(!running)return;
 
  ctx.clearRect(0,0,W,H);
 
- // Rocket launch from bottom to top
  rockets.forEach((r,i)=>{
   r.y-=r.speed;
   ctx.fillStyle="#ffe5a0";
-  ctx.shadowBlur=12;
-  ctx.shadowColor="#ffbd44";
+  ctx.shadowBlur=15;
+  ctx.shadowColor="#ffca54";
   ctx.beginPath();
   ctx.arc(r.x,r.y,3,0,Math.PI*2);
   ctx.fill();
 
   if(r.y<=r.target){
-   burst(r.x,r.y,Math.floor(Math.random()*13),r.hue);
+   explode(r.x,r.y,r.type);
    rockets.splice(i,1);
   }
  });
 
- // Explosion particles
  particles.forEach((p,i)=>{
   p.x+=p.vx;
   p.y+=p.vy;
@@ -355,7 +323,7 @@ function animate(){
 
   ctx.globalAlpha=Math.max(0,p.life);
   ctx.fillStyle=`hsl(${p.hue},100%,70%)`;
-  ctx.shadowBlur=8;
+  ctx.shadowBlur=9;
   ctx.shadowColor=ctx.fillStyle;
   ctx.beginPath();
   ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
@@ -366,58 +334,60 @@ function animate(){
 
  ctx.globalAlpha=1;
  ctx.shadowBlur=0;
- requestAnimationFrame(animate);
+ raf=requestAnimationFrame(draw);
 }
 
-// Launch 13 different bursts over 5 seconds
-let introTimers=[];
-function startIntro(){
+// OPEN RECEIVER LINK
+function startWelcome(){
  const params=new URLSearchParams(location.search);
  const sender=params.get("sender");
- const wish=params.get("wish");
 
  if(!sender)return;
 
- document.getElementById("showSender").textContent=
- "💌 With Love From: "+sender;
+ let message=params.get("wish")||"default";
+ if(message==="default")message=defaultWish;
 
- document.getElementById("showWish").textContent=
- wish||"இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️";
+ document.getElementById("showSender").textContent="💌 From: "+sender;
+ document.getElementById("showWish").textContent=message;
 
- document.getElementById("intro").classList.add("show");
+ const intro=document.getElementById("intro");
+ intro.classList.add("active");
 
- animationActive=true;
- animate();
+ running=true;
+ draw();
 
- // 13 fireworks in 5 seconds
+ // Exactly 13 different style launches
  for(let i=0;i<13;i++){
-  introTimers.push(setTimeout(()=>{
-   if(!animationActive)return;
-   rocket();
-   // Additional sky explosion
-   setTimeout(()=>{
-    if(animationActive){
-     burst(W*(.1+Math.random()*.8),
-           H*(.1+Math.random()*.4),
-           i,Math.random()*360);
-    }
-   },350);
-  },i*350));
+  launchTimers.push(setTimeout(()=>{
+   if(running)launch(i);
+  },i*450));
  }
 
- introTimers.push(setTimeout(finishIntro,5000));
+ // Automatic 7-second completion
+ launchTimers.push(setTimeout(()=>{
+  finishWelcome();
+ },7000));
 }
 
-function finishIntro(){
- animationActive=false;
- introTimers.forEach(clearTimeout);
- introTimers=[];
+// NO SKIP BUTTON
+function finishWelcome(){
+ running=false;
+ cancelAnimationFrame(raf);
+ launchTimers.forEach(clearTimeout);
+ launchTimers=[];
  particles=[];
  rockets=[];
- document.getElementById("intro").classList.remove("show");
+ ctx.clearRect(0,0,W,H);
+
+ document.getElementById("intro").classList.remove("active");
+
+ // Remove received parameters and return to first page
+ history.replaceState({}, "", location.pathname);
 }
 
-window.addEventListener("load",startIntro);
+window.addEventListener("load",()=>{
+ startWelcome();
+});
 </script>
 </body>
 </html>
