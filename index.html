@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#080604">
+<title>Happy New Year 2027 | VRPAIData</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="🎆 Happy New Year 2027 | VRPAIData">
+<meta property="og:description" content="✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! Wishing You Happiness, Love & Success in 2027!">
+<!-- Replace with a real, publicly accessible 1200x630 preview image URL -->
+<meta property="og:image" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
+
+<style>
+:root{
+  --gold:#f7d98c;
+  --gold-light:#fff0c6;
+  --gold-dark:#9b6920;
+  --ink:#080604;
+}
+*{box-sizing:border-box}
+html,body{
+  width:100%;height:100%;margin:0;overflow:hidden;
+  overscroll-behavior:none;background:#050403;color:var(--gold-light);
+  font-family:Arial,sans-serif;
+}
+body{display:flex;align-items:center;justify-content:center}
+#app{
+  position:relative;isolation:isolate;overflow:hidden;
+  width:min(100vw,56.25svh);height:min(100svh,177.7778vw);
+  aspect-ratio:9/16;background:#080604;border:1px solid #98702b;
+}
+#bgFallback,#bgVideo,#videoShade,#goldDust{
+  position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+}
+#bgFallback{
+  z-index:0;
+  background:radial-gradient(ellipse at 50% 38%,#6c4314 0%,#211506 42%,#050403 100%);
+}
+#bgVideo{z-index:1;object-fit:cover;filter:brightness(.43) saturate(1.08)}
+#videoShade{
+  z-index:2;
+  background:linear-gradient(180deg,#05040388,#08060466 42%,#030201e8);
+}
+#goldDust{
+  z-index:3;opacity:.2;
+  background-image:
+    radial-gradient(#ffe6a1 1px,transparent 1.5px),
+    radial-gradient(#eab64d 1px,transparent 1.5px);
+  background-size:79px 93px,121px 137px;
+  background-position:0 0,35px 45px;
+  animation:dust 18s linear infinite;
+}
+@keyframes dust{
+  to{background-position:0 -180px,35px -210px}
+}
+#main{
+  position:absolute;z-index:4;inset:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:5% 5% 4%;text-align:center;
+}
+.brand{
+  font-weight:900;letter-spacing:4px;
+  font-size:clamp(17px,4.5vw,23px);
+  color:var(--gold);text-shadow:0 0 12px #a66b1e;
+}
+.tag{font-size:8px;letter-spacing:3px;color:#e2c17a;margin-top:5px}
+.hero{margin-top:1%}
+.heroTitle{
+  font:clamp(28px,8vw,43px) Georgia,serif;
+  color:#fff0c4;text-shadow:0 0 12px #9a6927;
+}
+.year{
+  font:bold clamp(76px,21vw,108px) Georgia,serif;line-height:1.05;
+  color:#ffdf8c;text-shadow:0 0 8px #d69a39,0 0 20px #805018;
+}
+.sub{font-size:11px;line-height:1.7;color:#f0d9a5}
+.timerWrap{width:100%}
+.timerTitle{font-size:9px;letter-spacing:3px;color:#f0d18b;margin-bottom:8px}
+.timer{display:flex;gap:5px;width:100%}
+.unit{
+  flex:1;min-width:0;padding:9px 2px;border:1px solid #98702b;
+  border-radius:9px;background:#120d08e8;
+}
+.unit b{display:block;font-size:clamp(18px,5vw,24px);color:#ffe8ae}
+.unit span{font-size:7px;letter-spacing:1px;color:#c6a66a}
+.panel{
+  width:100%;padding:11px 12px;border:1px solid #9b7535;border-radius:13px;
+  background:#100b07ed;box-shadow:0 8px 25px #0008;
+}
+.panel h3{font:16px Georgia,serif;color:#ffe4a1;margin:0 0 7px}
+input,textarea{
+  display:block;width:100%;margin:5px 0;padding:10px;
+  border:1px solid #876329;border-radius:7px;background:#080604;
+  color:#fff0c6;font-size:12px;outline:none;
+}
+input:focus,textarea:focus{border-color:#f7d98c}
+textarea{height:58px;resize:none;line-height:1.45}
+button{
+  border:0;border-radius:25px;padding:11px 18px;
+  background:linear-gradient(100deg,#a87520,#ffe9a8,#b27c23);
+  color:#180f03;font-size:12px;font-weight:bold;cursor:pointer;
+}
+button:active{transform:scale(.99)}
+.send{width:100%;margin-top:4px}
+#status{font-size:9px;color:#e7c77e;min-height:12px;margin-top:5px}
+.footer{font-size:8px;letter-spacing:2px;color:#c0a16a}
+
+/* Receiver greeting: only fireworks and text; no balloons, gifts or characters */
+#intro{
+  position:absolute;z-index:10;inset:0;display:none;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 42%,#241707 0%,#100a04 48%,#030201 100%);
+}
+#intro.active{display:block}
+#sky{position:absolute;inset:0;width:100%;height:100%;display:block}
+#introText{
+  position:absolute;z-index:2;left:5%;right:5%;top:39%;
+  text-align:center;opacity:0;transform:translateY(5px);
+  animation:reveal .55s ease .15s forwards;
+  pointer-events:none;
+}
+@keyframes reveal{to{opacity:1;transform:translateY(0)}}
+#introText .eyebrow{font-size:10px;letter-spacing:3px;color:#e9c77c}
+#introText h1{
+  font:clamp(48px,14vw,76px) Georgia,serif;color:#ffdf8b;
+  text-shadow:0 0 15px #a66b1e;margin:8px 0;
+}
+#showWish{
+  font:16px Georgia,serif;line-height:1.6;color:#fff0c7;
+  white-space:pre-wrap;overflow-wrap:anywhere;
+}
+#showSender{font-size:12px;color:#e9c77c;margin-top:15px}
+@media(max-height:650px){
+  #main{padding-top:3%;padding-bottom:2%}
+  .panel{padding:8px 10px}
+  textarea{height:48px}
+  .unit{padding:6px 2px}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="bgFallback"></div>
+  <!-- Optional: upload a muted looping MP4 named newyear-bg.mp4 beside index.html -->
+  <video id="bgVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="newyear-bg.mp4" type="video/mp4">
+  </video>
+  <div id="videoShade"></div>
+  <div id="goldDust"></div>
+
+  <main id="main">
+    <header>
+      <div class="brand">VRPAIData</div>
+      <div class="tag">SPREADING HAPPINESS</div>
+    </header>
+
+    <section class="hero">
+      <div class="heroTitle">Happy New Year</div>
+      <div class="year">2027</div>
+      <div class="sub">புதிய நம்பிக்கை • புதிய கனவுகள்<br>A Beautiful New Beginning ❤️</div>
+    </section>
+
+    <section class="timerWrap">
+      <div class="timerTitle">NEW YEAR COUNTDOWN</div>
+      <div class="timer">
+        <div class="unit"><b id="days">00</b><span>DAYS</span></div>
+        <div class="unit"><b id="hours">00</b><span>HOURS</span></div>
+        <div class="unit"><b id="minutes">00</b><span>MINUTES</span></div>
+        <div class="unit"><b id="seconds">00</b><span>SECONDS</span></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>💌 Send Your Wishes</h3>
+      <input id="sender" maxlength="45" autocomplete="name" placeholder="Sender Name / அனுப்புநர் பெயர்">
+      <textarea id="wish" maxlength="180">✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️
+Wishing You Happiness, Love & Success in 2027!</textarea>
+      <button class="send" id="sendButton" type="button">🎁 SEND WISHES</button>
+      <div id="status" role="status" aria-live="polite"></div>
+    </section>
+    <footer class="footer">WITH LOVE ❤️ VRPAIData</footer>
+  </main>
+
+  <section id="intro" aria-label="New Year greeting animation">
+    <canvas id="sky"></canvas>
+    <div id="introText">
+      <div class="eyebrow">A SPECIAL WISH FOR YOU</div>
+      <h1>2027</h1>
+      <div id="showWish"></div>
+      <div id="showSender"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+"use strict";
+
+const DEFAULT_WISH =
+  "✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️\nWishing You Happiness, Love & Success in 2027!";
+
+// Countdown to New Year in India Standard Time.
+function updateTimer(){
+  const target = new Date("2027-01-01T00:00:00+05:30").getTime();
+  const remaining = Math.max(0, target - Date.now());
+  document.getElementById("days").textContent =
+    String(Math.floor(remaining / 86400000)).padStart(2,"0");
+  document.getElementById("hours").textContent =
+    String(Math.floor(remaining % 86400000 / 3600000)).padStart(2,"0");
+  document.getElementById("minutes").textContent =
+    String(Math.floor(remaining % 3600000 / 60000)).padStart(2,"0");
+  document.getElementById("seconds").textContent =
+    String(Math.floor(remaining % 60000 / 1000)).padStart(2,"0");
+}
+updateTimer();
+setInterval(updateTimer,1000);
+
+// Build a personalized greeting link and open the phone's share sheet.
+async function sendWish(){
+  const name = document.getElementById("sender").value.trim();
+  const message = document.getElementById("wish").value.trim() || DEFAULT_WISH;
+  const status = document.getElementById("status");
+
+  if(!name){
+    alert("Please enter Sender Name / அனுப்புநர் பெயர்");
+    document.getElementById("sender").focus();
+    return;
+  }
+
+  const shareURL = new URL(location.href);
+  shareURL.search = "";
+  shareURL.hash = "";
+  shareURL.searchParams.set("sender",name);
+  shareURL.searchParams.set("wish",message === DEFAULT_WISH ? "default" : message);
+
+  const link = shareURL.toString();
+  const shareText =
+    "🎆 Happy New Year 2027!\n💌 From: " + name +
+    "\n\n✨ Open Your Wishes:\n" + link;
+
+  if(navigator.share){
+    try{
+      await navigator.share({
+        title:"Happy New Year 2027 | VRPAIData",
+        text:shareText
+      });
+      status.textContent = "உங்கள் வாழ்த்து பகிரப்பட்டது. நன்றி! ❤️";
+    }catch(error){
+      if(error && error.name !== "AbortError"){
+        status.textContent = "பகிர முடியவில்லை. மீண்டும் முயற்சிக்கவும்.";
+      }
+    }
+  }else{
+    location.href = "https://wa.me/?text=" + encodeURIComponent(shareText);
+  }
+}
+document.getElementById("sendButton").addEventListener("click",sendWish);
+
+// ------------------------------------------------------------
+// CLASSIC FIREWORKS
+// Rocket rises with a visible trail, then bursts into fine sparks.
+// No full-screen flash, no white overlay, no random per-frame flicker.
+// ------------------------------------------------------------
+const canvas = document.getElementById("sky");
+const ctx = canvas.getContext("2d");
+let W = 0, H = 0, dpr = 1;
+let particles = [], rockets = [], animationFrame = 0, running = false;
+let launchTimers = [], finishTimer = null;
+
+const HUES = [42,190,280,0,120,320,55,210,25,160,300,80,15];
+
+function resizeCanvas(){
+  dpr = Math.min(window.devicePixelRatio || 1,2);
+  W = canvas.clientWidth;
+  H = canvas.clientHeight;
+  canvas.width = Math.max(1,Math.floor(W*dpr));
+  canvas.height = Math.max(1,Math.floor(H*dpr));
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+window.addEventListener("resize",resizeCanvas);
+
+function launchRocket(type){
+  rockets.push({
+    x:W*(.12 + Math.random()*.76),
+    y:H + 12,
+    targetY:H*(.14 + Math.random()*.29),
+    speed:7.5 + Math.random()*1.5,
+    hue:HUES[type],
+    type,
+    trail:[]
+  });
+}
+
+function addParticle(x,y,vx,vy,hue,size,life,gravity){
+  particles.push({
+    x,y,oldX:x,oldY:y,vx,vy,hue,size,
+    life,decay:.009 + Math.random()*.003,
+    gravity
+  });
+}
+
+function explode(x,y,type,hue){
+  const count = type === 12 ? 100 : 76;
+
+  for(let i=0;i<count;i++){
+    const angle = Math.PI*2*i/count + Math.random()*.025;
+    let speed = 2 + Math.random()*2.6;
+    let vx = Math.cos(angle)*speed;
+    let vy = Math.sin(angle)*speed;
+
+    switch(type){
+      case 0: break; // round chrysanthemum
+      case 1:
+        speed = 3.7 + Math.random()*1.4;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 2:
+        speed = i%2 ? 4.7 : 1.35;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 3: vx *= .55; vy *= 1.65; break; // willow
+      case 4: vx *= 1.55; vy *= .72; break; // wide ring
+      case 5:
+        speed = 1.4 + Math.random()*5.2;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 6:
+        speed = i%3 === 0 ? 5.5 : 1.9;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 7:{
+        const a = Math.PI*2*Math.floor(i/5)/16;
+        vx = Math.cos(a)*speed; vy = Math.sin(a)*speed;
+        break;
+      }
+      case 8: vx *= 1.4; vy *= .62; break;
+      case 9: vx *= .62; vy *= 1.4; break;
+      case 10:
+        speed = 2.7 + Math.sin(i*4)*1.6;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 11:
+        speed = 1.2 + Math.random()*5.8;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+      case 12:
+        speed = 2 + Math.random()*4.8;
+        vx = Math.cos(angle)*speed; vy = Math.sin(angle)*speed;
+        break;
+    }
+    addParticle(x,y,vx,vy,hue + Math.random()*20,1 + Math.random()*1.25,
+      .9 + Math.random()*.3,.025 + Math.random()*.02);
+  }
+
+  // Small golden embers fall after the main burst.
+  for(let i=0;i<13;i++){
+    const a = Math.random()*Math.PI*2;
+    const speed = .5 + Math.random()*1.7;
+    addParticle(x,y,Math.cos(a)*speed,Math.sin(a)*speed,
+      38 + Math.random()*12,.8 + Math.random()*.7,1.05,.03);
+  }
+}
+
+function drawRocket(rocket){
+  rocket.trail.push({x:rocket.x,y:rocket.y});
+  if(rocket.trail.length > 8) rocket.trail.shift();
+
+  for(let i=0;i<rocket.trail.length;i++){
+    const point = rocket.trail[i];
+    const alpha = (i+1)/rocket.trail.length*.55;
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = `hsl(${rocket.hue},95%,68%)`;
+    ctx.beginPath();
+    ctx.arc(point.x,point.y,1 + i/rocket.trail.length,0,Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  ctx.fillStyle = `hsl(${rocket.hue},100%,76%)`;
+  ctx.beginPath();
+  ctx.arc(rocket.x,rocket.y,1.8,0,Math.PI*2);
+  ctx.fill();
+}
+
+function drawParticle(p){
+  const alpha = Math.max(0,Math.min(1,p.life));
+  ctx.globalAlpha = alpha;
+  // Fixed brightness per particle: no random brightness flicker each frame.
+  ctx.strokeStyle = `hsl(${p.hue},95%,68%)`;
+  ctx.lineWidth = p.size;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(p.oldX,p.oldY);
+  ctx.lineTo(p.x,p.y);
+  ctx.stroke();
+}
+
+function frame(){
+  if(!running) return;
+
+  // Clear every frame. Sparks are drawn as short streaks, preventing screen-wide glow.
+  ctx.clearRect(0,0,W,H);
+
+  for(let i=rockets.length-1;i>=0;i--){
+    const rocket = rockets[i];
+    rocket.y -= rocket.speed;
+    drawRocket(rocket);
+    if(rocket.y <= rocket.targetY){
+      explode(rocket.x,rocket.y,rocket.type,rocket.hue);
+      rockets.splice(i,1);
+    }
+  }
+
+  for(let i=particles.length-1;i>=0;i--){
+    const p = particles[i];
+    p.oldX = p.x;
+    p.oldY = p.y;
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += p.gravity;
+    p.vx *= .992;
+    p.vy *= .992;
+    p.life -= p.decay;
+    drawParticle(p);
+    if(p.life <= 0) particles.splice(i,1);
+  }
+
+  ctx.globalAlpha = 1;
+  animationFrame = requestAnimationFrame(frame);
+}
+
+function finishIntro(){
+  running = false;
+  cancelAnimationFrame(animationFrame);
+  launchTimers.forEach(clearTimeout);
+  launchTimers = [];
+  if(finishTimer) clearTimeout(finishTimer);
+  rockets = [];
+  particles = [];
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  document.getElementById("intro").classList.remove("active");
+  // Remove sender/wish query parameters after the 7-second greeting.
+  history.replaceState({},document.title,location.pathname);
+}
+
+function startWelcome(){
+  const params = new URLSearchParams(location.search);
+  const sender = params.get("sender");
+  if(!sender) return;
+
+  let wish = params.get("wish") || "default";
+  if(wish === "default") wish = DEFAULT_WISH;
+
+  document.getElementById("showSender").textContent = "💌 From: " + sender;
+  document.getElementById("showWish").textContent = wish;
+
+  resizeCanvas();
+  document.getElementById("intro").classList.add("active");
+  running = true;
+  frame();
+
+  // 13 different shell patterns launch in sequence.
+  for(let i=0;i<13;i++){
+    launchTimers.push(setTimeout(()=>{
+      if(running) launchRocket(i);
+    },i*250));
+  }
+
+  // Automatically return to the main page after exactly 7 seconds.
+  finishTimer = setTimeout(finishIntro,7000);
+}
+
+window.addEventListener("load",()=>{
+  const video = document.getElementById("bgVideo");
+  if(video) video.play().catch(()=>{});
+  startWelcome();
+});
+</script>
+</body>
+</html>
