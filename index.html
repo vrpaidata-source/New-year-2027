@@ -54,14 +54,20 @@ body{display:flex;align-items:center;justify-content:center}
 }
 
 #bgVideo{
- object-fit:cover;
- filter:brightness(.4) saturate(1.1);
- z-index:1;
+  z-index:1;
+  object-fit:cover;
+  filter:brightness(.85) contrast(1.12) saturate(1.25);
+  opacity:1;
 }
 
 #videoShade{
- z-index:2;
- background:linear-gradient(180deg,#05040399,#08060466 42%,#030201ee);
+  z-index:2;
+  background:linear-gradient(
+    180deg,
+    #05040333,
+    #08060422 42%,
+    #03020188
+  );
 }
 
 #goldDust{
