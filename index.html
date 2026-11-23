@@ -10,7 +10,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="🎆 Happy New Year 2027 | VRPAIData">
-<meta property="og:description" content="✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! Wishing You Happiness, Love & Success in 2027!">
+<meta property="og:description" content="VRPAIData வழங்கும் இனிய புத்தாண்டு நல்வாழ்த்துகள்!">
 <meta property="og:image" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
 
 <style>
@@ -18,8 +18,8 @@
  --gold:#f7d98c;
  --light:#fff0c6;
  --orange:#e87521;
- --dark:#080604;
 }
+
 *{box-sizing:border-box}
 
 html,body{
@@ -32,11 +32,13 @@ html,body{
  font-family:Arial,sans-serif;
  overscroll-behavior:none;
 }
+
 body{
  display:flex;
  align-items:center;
  justify-content:center;
 }
+
 #app{
  position:relative;
  isolation:isolate;
@@ -48,7 +50,7 @@ body{
  border:1px solid #98702b;
 }
 
-/* MAIN BACKGROUND */
+/* BACKGROUND */
 
 #bgFallback,#bgVideo,#videoShade,#goldDust{
  position:absolute;
@@ -57,21 +59,25 @@ body{
  height:100%;
  pointer-events:none;
 }
+
 #bgFallback{
  background:radial-gradient(ellipse at 50% 38%,
  #71300e 0%,#281407 42%,#050403 100%);
 }
+
 #bgVideo{
  z-index:1;
  object-fit:cover;
  filter:brightness(.85) contrast(1.12) saturate(1.25);
 }
+
 #videoShade{
  z-index:2;
  background:linear-gradient(
   180deg,#05040333,#08060422 42%,#03020188
  );
 }
+
 #goldDust{
  z-index:3;
  opacity:.2;
@@ -79,9 +85,9 @@ body{
  radial-gradient(#ffe6a1 1px,transparent 1.5px),
  radial-gradient(#eab64d 1px,transparent 1.5px);
  background-size:79px 93px,121px 137px;
- background-position:0 0,35px 45px;
  animation:dust 18s linear infinite;
 }
+
 @keyframes dust{
  to{background-position:0 -180px,35px -210px}
 }
@@ -99,6 +105,7 @@ body{
  padding:5% 5% 4%;
  text-align:center;
 }
+
 .brand{
  font-weight:900;
  letter-spacing:4px;
@@ -106,37 +113,50 @@ body{
  color:var(--gold);
  text-shadow:0 0 12px #a66b1e;
 }
+
 .tag{
  font-size:8px;
  letter-spacing:3px;
  color:#e2c17a;
  margin-top:5px;
 }
+
 .hero{margin-top:1%}
+
 .heroTitle{
  font:clamp(28px,8vw,43px) Georgia,serif;
  color:#fff0c4;
  text-shadow:0 0 12px #9a6927;
 }
+
 .year{
  font:bold clamp(76px,21vw,108px) Georgia,serif;
  line-height:1.05;
  color:#ffdf8c;
  text-shadow:0 0 8px #d69a39,0 0 20px #805018;
 }
+
 .sub{
  font-size:11px;
  line-height:1.7;
  color:#f0d9a5;
 }
+
 .timerWrap{width:100%}
+
 .timerTitle{
  font-size:9px;
  letter-spacing:3px;
  color:#f0d18b;
  margin-bottom:8px;
 }
-.timer{display:flex;gap:5px;width:100%}
+
+.timer{
+ display:flex;
+ gap:5px;
+ width:100%;
+}
+
 .unit{
  flex:1;
  min-width:0;
@@ -145,16 +165,19 @@ body{
  border-radius:9px;
  background:#120d08e8;
 }
+
 .unit b{
  display:block;
  font-size:clamp(18px,5vw,24px);
  color:#ffe8ae;
 }
+
 .unit span{
  font-size:7px;
  letter-spacing:1px;
  color:#c6a66a;
 }
+
 .panel{
  width:100%;
  padding:11px 12px;
@@ -163,11 +186,13 @@ body{
  background:#100b07ed;
  box-shadow:0 8px 25px #0008;
 }
+
 .panel h3{
  font:16px Georgia,serif;
  color:#ffe4a1;
  margin:0 0 7px;
 }
+
 input,textarea{
  display:block;
  width:100%;
@@ -180,12 +205,17 @@ input,textarea{
  font-size:12px;
  outline:none;
 }
-input:focus,textarea:focus{border-color:#f7d98c}
-textarea{
- height:58px;
- resize:none;
- line-height:1.45;
+
+input:focus,textarea:focus{
+ border-color:#f7d98c;
 }
+
+textarea{
+ height:75px;
+ resize:none;
+ line-height:1.5;
+}
+
 button{
  border:0;
  border-radius:25px;
@@ -196,21 +226,28 @@ button{
  font-weight:bold;
  cursor:pointer;
 }
+
 button:active{transform:scale(.99)}
-.send{width:100%;margin-top:4px}
+
+.send{
+ width:100%;
+ margin-top:4px;
+}
+
 #status{
  font-size:9px;
  color:#e7c77e;
  min-height:12px;
  margin-top:5px;
 }
+
 .footer{
  font-size:8px;
  letter-spacing:2px;
  color:#c0a16a;
 }
 
-/* LAST 10 SECONDS 3D CELEBRATION */
+/* 3D COUNTDOWN VIDEO */
 
 #countdownCelebration{
  position:absolute;
@@ -220,7 +257,10 @@ button:active{transform:scale(.99)}
  overflow:hidden;
  background:#030201;
 }
-#countdownCelebration.active{display:block}
+
+#countdownCelebration.active{
+ display:block;
+}
 
 #celebrationVideo{
  position:absolute;
@@ -231,6 +271,7 @@ button:active{transform:scale(.99)}
  background:#030201;
  filter:brightness(.95) contrast(1.12) saturate(1.3);
 }
+
 .celebrationShade{
  position:absolute;
  inset:0;
@@ -239,6 +280,7 @@ button:active{transform:scale(.99)}
  );
  pointer-events:none;
 }
+
 #bigCountdown{
  position:absolute;
  z-index:2;
@@ -254,12 +296,13 @@ button:active{transform:scale(.99)}
  0 0 90px #ff9c21;
  animation:countPop .9s ease infinite alternate;
 }
+
 @keyframes countPop{
  from{transform:scale(.8);opacity:.7}
  to{transform:scale(1.12);opacity:1}
 }
 
-/* FINAL SCREEN */
+/* FINAL NEW YEAR */
 
 #newYearFinal{
  position:absolute;
@@ -275,27 +318,33 @@ button:active{transform:scale(.99)}
  color:#ffe6a3;
  text-shadow:0 0 20px #ff9c21;
 }
+
 #newYearFinal.show{
  display:flex;
  animation:grandEntry 1.5s ease both;
 }
+
 #newYearFinal div{
  font:clamp(24px,7vw,39px) Georgia,serif;
 }
+
 #newYearFinal strong{
  font:bold clamp(100px,30vw,155px) Georgia,serif;
  color:#ffd16c;
  text-shadow:0 0 15px #ffb52e,0 0 45px #ff7900,0 0 90px #ff9c21;
 }
+
 #newYearFinal span{
  font-size:9px;
  letter-spacing:3px;
  line-height:1.8;
 }
+
 #newYearFinal small{
  font-size:12px;
  letter-spacing:3px;
 }
+
 @keyframes grandEntry{
  from{opacity:0;transform:scale(.3)}
  to{opacity:1;transform:scale(1)}
@@ -313,6 +362,7 @@ button:active{transform:scale(.99)}
   ellipse at 50% 35%,#54220d 0%,#1b0c06 42%,#030201 100%
  );
 }
+
 #intro.active{display:block}
 
 #sky{
@@ -322,6 +372,7 @@ button:active{transform:scale(.99)}
  height:100%;
  pointer-events:none;
 }
+
 #intro::before{
  content:"";
  position:absolute;
@@ -350,6 +401,7 @@ button:active{transform:scale(.99)}
  perspective:1000px;
  transition:opacity .8s ease,transform .8s ease;
 }
+
 #cover{
  position:relative;
  width:100%;
@@ -367,6 +419,7 @@ button:active{transform:scale(.99)}
  transform-style:preserve-3d;
  transition:transform 1.2s ease,opacity 1s ease;
 }
+
 #cover::before{
  content:"";
  position:absolute;
@@ -375,28 +428,33 @@ button:active{transform:scale(.99)}
  border-radius:9px;
  pointer-events:none;
 }
+
 .coverBrand{
  font-size:12px;
  letter-spacing:5px;
  color:#e9b96b;
 }
+
 .coverLine{
  width:65%;
  height:1px;
  background:linear-gradient(90deg,transparent,#ffdb8a,transparent);
  margin:20px 0;
 }
+
 .coverTitle{
  font:clamp(32px,10vw,50px) Georgia,serif;
  color:#ffe1a0;
  text-shadow:0 0 20px #e87521;
  text-align:center;
 }
+
 .coverYear{
  font:bold clamp(65px,18vw,95px) Georgia,serif;
  color:#ffc56c;
  text-shadow:0 0 18px #e87521,0 4px 10px #000;
 }
+
 .coverHint{
  position:absolute;
  bottom:23px;
@@ -405,7 +463,11 @@ button:active{transform:scale(.99)}
  letter-spacing:2px;
  animation:hintPulse 1.5s infinite;
 }
-@keyframes hintPulse{50%{opacity:.45}}
+
+@keyframes hintPulse{
+ 50%{opacity:.45}
+}
+
 #cover.open{
  transform:rotateY(-110deg) scale(.88);
  opacity:0;
@@ -418,9 +480,10 @@ button:active{transform:scale(.99)}
  z-index:3;
  left:8%;
  right:8%;
- top:24%;
- min-height:48%;
- padding:28px 17px 24px;
+ top:17%;
+ max-height:68%;
+ overflow-y:auto;
+ padding:20px 15px;
  border:1px solid #e5b65e;
  border-radius:8px;
  background:linear-gradient(145deg,#fff0c9 0%,#f2d29a 48%,#e6b873 100%);
@@ -432,45 +495,53 @@ button:active{transform:scale(.99)}
  transform-origin:bottom center;
  transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.8,.2,1);
 }
+
 #letter.show{
  opacity:1;
  transform:translateY(0) scale(1) rotateX(0);
 }
+
 .letterTop{
  font-size:9px;
  letter-spacing:3px;
  color:#9a541d;
 }
+
 .letterDivider{
  width:70%;
  height:1px;
  margin:13px auto;
  background:linear-gradient(90deg,transparent,#a86a26,transparent);
 }
+
 .letterTitle{
- font:clamp(32px,9vw,45px) Georgia,serif;
+ font:clamp(29px,8vw,40px) Georgia,serif;
  color:#9b4514;
  text-shadow:0 1px 0 #fff4d8;
  margin:8px 0;
 }
+
 .letterYear{
  font:bold clamp(42px,12vw,62px) Georgia,serif;
  color:#b65b19;
  text-shadow:0 2px 2px #fff2c4;
 }
+
 #showWish{
- font:15px Georgia,serif;
- line-height:1.65;
+ font:14px/1.7 Georgia,serif;
  color:#45230e;
  white-space:pre-wrap;
  overflow-wrap:anywhere;
  margin-top:14px;
+ text-align:center;
 }
+
 #showSender{
  font:bold 13px Georgia,serif;
  color:#8e4013;
  margin-top:18px;
 }
+
 .letterHeart{
  font-size:19px;
  margin-top:10px;
@@ -491,6 +562,7 @@ button:active{transform:scale(.99)}
  opacity:0;
  transition:opacity 1s;
 }
+
 #fireworksLabel.show{opacity:1}
 
 /* CLOSE */
@@ -511,16 +583,17 @@ button:active{transform:scale(.99)}
  opacity:0;
  transition:opacity 1s;
 }
+
 #closeIntro.show{opacity:1}
 
 @media(max-height:650px){
  #main{padding-top:3%;padding-bottom:2%}
  .panel{padding:8px 10px}
- textarea{height:48px}
+ textarea{height:55px}
  .unit{padding:6px 2px}
  #coverStage{top:18%;height:57%}
- #letter{top:20%;min-height:52%;padding:18px 13px}
- #showWish{font-size:13px}
+ #letter{top:14%;max-height:70%;padding:14px 12px}
+ #showWish{font-size:12px}
 }
 </style>
 </head>
@@ -573,8 +646,7 @@ button:active{transform:scale(.99)}
     autocomplete="name"
     placeholder="Sender Name / அனுப்புநர் பெயர்">
 
-   <textarea id="wish" maxlength="180">✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️
-Wishing You Happiness, Love & Success in 2027!</textarea>
+   <textarea id="wish" maxlength="600"></textarea>
 
    <button class="send" id="sendButton" type="button">
     🎁 SEND WISHES
@@ -588,7 +660,7 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
  </main>
 
 
- <!-- LAST 10 SECONDS CELEBRATION -->
+ <!-- 3D CELEBRATION -->
 
  <section id="countdownCelebration">
 
@@ -602,26 +674,25 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
   <div id="bigCountdown">10</div>
 
   <div id="newYearFinal">
-   <div>🎆 HAPPY NEW YEAR 🎆</div>
+   <div>🎆 இனிய புத்தாண்டு 🎆</div>
    <strong>2027</strong>
-   <span>WELCOME TO A BEAUTIFUL<br>NEW BEGINNING</span>
+   <span>புதிய நம்பிக்கை • புதிய தொடக்கம்</span>
    <small>WITH LOVE ❤️ VRPAIData</small>
   </div>
 
  </section>
 
 
- <!-- MUSIC: STARTS ON FIRST SCREEN TOUCH -->
+ <!-- MUSIC -->
 
  <audio id="newYearMusic"
   src="newyear-song.mp3"
   preload="auto"
-  loop
-  playsinline>
+  loop>
  </audio>
 
 
- <!-- RECEIVER ANIMATION -->
+ <!-- RECEIVER SCREEN -->
 
  <section id="intro" aria-label="Personal New Year greeting">
 
@@ -632,6 +703,7 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
   </div>
 
   <div id="coverStage">
+
    <div id="cover">
 
     <div class="coverBrand">VRPAIData</div>
@@ -645,17 +717,23 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
     </div>
 
    </div>
+
   </div>
 
   <div id="letter">
 
-   <div class="letterTop">A SPECIAL MESSAGE FOR YOU</div>
+   <div class="letterTop">அன்புடன் வழங்கும் புத்தாண்டு வாழ்த்து</div>
    <div class="letterDivider"></div>
-   <div class="letterTitle">Happy New Year</div>
+
+   <div class="letterTitle">இனிய புத்தாண்டு</div>
    <div class="letterYear">2027</div>
+
    <div class="letterDivider"></div>
+
    <div id="showWish"></div>
+
    <div id="showSender"></div>
+
    <div class="letterHeart">❤️</div>
 
   </div>
@@ -672,32 +750,41 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
 <script>
 "use strict";
 
-/* DEFAULT WISH */
+/* ==============================================
+   PROFESSIONAL TAMIL DEFAULT WISH
+============================================== */
 
 const DEFAULT_WISH =
-"✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️\nWishing You Happiness, Love & Success in 2027!";
+`🎆 இனிய புத்தாண்டு நல்வாழ்த்துகள் – 2027! 🎆
+
+புதிய ஆண்டு என்பது புதிய தொடக்கங்களின் அடையாளம். புதிய நம்பிக்கைகள், புதிய வாய்ப்புகள், புதிய இலக்குகள் என உங்கள் வாழ்க்கையில் மகிழ்ச்சியும் முன்னேற்றமும் மலரட்டும்.
+
+இந்த 2027-ஆம் ஆண்டு உங்களுக்கும் உங்கள் குடும்பத்தினருக்கும்,
+
+✨ நிறைவான ஆரோக்கியம்
+✨ அளவற்ற மகிழ்ச்சி
+✨ பொருளாதார வளம்
+✨ தொழில் மற்றும் வாழ்க்கையில் வெற்றி
+✨ மனநிறைவும் அமைதியும்
+
+என அனைத்துச் சிறப்புகளையும் வழங்கட்டும்.
+
+கடந்த கால அனுபவங்களைப் பாடமாகக் கொண்டு, எதிர்காலக் கனவுகளை நனவாக்கும் ஆண்டாக 2027 அமையட்டும்!
+
+❤️ அன்புடனும் நல்வாழ்த்துகளுடனும்,
+TEAM VRPAIData`;
 
 
-/* ELEMENTS */
+/* DEFAULT TEXTAREA */
+
+document.getElementById("wish").value = DEFAULT_WISH;
+
+
+/* ==============================================
+   MUSIC - FIRST SCREEN TOUCH
+============================================== */
 
 const music = document.getElementById("newYearMusic");
-
-const celebrationScreen =
-document.getElementById("countdownCelebration");
-
-const celebrationVideo =
-document.getElementById("celebrationVideo");
-
-const bigCountdown =
-document.getElementById("bigCountdown");
-
-const finalScreen =
-document.getElementById("newYearFinal");
-
-
-/* =================================================
-   MUSIC - FIRST TOUCH STARTS SONG IMMEDIATELY
-================================================= */
 
 let musicUnlocked = false;
 
@@ -705,7 +792,6 @@ function unlockMusic(){
 
  if(musicUnlocked) return;
 
- // Start playback directly inside the user gesture.
  music.volume = 0.85;
 
  const playPromise = music.play();
@@ -716,39 +802,45 @@ function unlockMusic(){
 
    musicUnlocked = true;
 
-   console.log("New Year song started!");
+   console.log("New Year song started");
 
   }).catch(error=>{
 
-   console.log("Music playback blocked. Touch again.",error);
+   console.log("Touch again to start music",error);
 
   });
-
- }else{
-
-  musicUnlocked = true;
 
  }
 
 }
 
-/*
- Keep listener active until playback succeeds.
- This also allows another touch if the first attempt fails.
-*/
+/* FIRST TOUCH ANYWHERE */
 
-document.addEventListener(
- "pointerdown",
- unlockMusic
-);
+document.addEventListener("pointerdown",unlockMusic);
 
 
-/* =================================================
-   COUNTDOWN CELEBRATION
-================================================= */
+/* ==============================================
+   MAIN COUNTDOWN - INDIA TIME
+============================================== */
+
+const NEW_YEAR_TARGET =
+ new Date("2027-01-01T00:00:00+05:30").getTime();
 
 let celebrationStarted = false;
 let celebrationFinished = false;
+
+const celebrationScreen =
+ document.getElementById("countdownCelebration");
+
+const celebrationVideo =
+ document.getElementById("celebrationVideo");
+
+const bigCountdown =
+ document.getElementById("bigCountdown");
+
+const finalScreen =
+ document.getElementById("newYearFinal");
+
 
 function startCountdownCelebration(){
 
@@ -764,18 +856,16 @@ function startCountdownCelebration(){
 
  bigCountdown.textContent = "10";
 
- // Start the 3D video.
  celebrationVideo.currentTime = 0;
 
  celebrationVideo.play().catch(error=>{
 
-  console.log("Celebration video unavailable:",error);
+  console.log("3D video error:",error);
 
  });
 
- // IMPORTANT:
- // Music is NOT restarted here.
- // Music has already started on the first screen touch.
+ // Music is already playing from first touch.
+ // Do not restart music here.
 
 }
 
@@ -810,13 +900,6 @@ function finishNewYearCelebration(){
 }
 
 
-/* =================================================
-   MAIN COUNTDOWN - INDIA TIME
-================================================= */
-
-const NEW_YEAR_TARGET =
-new Date("2027-01-01T00:00:00+05:30").getTime();
-
 function updateTimer(){
 
  const remaining = Math.max(
@@ -837,8 +920,6 @@ function updateTimer(){
  String(Math.floor(remaining%60000/1000)).padStart(2,"0");
 
 
- // Last 10 seconds.
-
  if(remaining <= 10000){
 
   startCountdownCelebration();
@@ -854,9 +935,9 @@ updateTimer();
 setInterval(updateTimer,100);
 
 
-/* =================================================
+/* ==============================================
    SHARE WISHES
-================================================= */
+============================================== */
 
 async function sendWish(){
 
@@ -934,22 +1015,18 @@ document.getElementById("sendButton")
 .addEventListener("click",sendWish);
 
 
-/* =================================================
+/* ==============================================
    FIREWORKS ENGINE
-================================================= */
+============================================== */
 
 const canvas = document.getElementById("sky");
-
 const ctx = canvas.getContext("2d",{alpha:true});
 
 let W=0,H=0,dpr=1;
-
 let particles=[];
 let rockets=[];
-
 let animationFrame=0;
 let running=false;
-
 let launchTimers=[];
 
 const HUES=[
@@ -984,17 +1061,11 @@ function launchRocket(type){
  rockets.push({
 
   x:W*(.14+Math.random()*.72),
-
   y:H+12,
-
   targetY:H*(.15+Math.random()*.3),
-
   speed:6+Math.random()*1.5,
-
   hue:HUES[type%HUES.length],
-
   type,
-
   trail:[]
 
  });
@@ -1009,15 +1080,11 @@ function addParticle(x,y,vx,vy,hue,size,life,gravity){
   x,y,
   oldX:x,
   oldY:y,
-
   vx,vy,
   hue,size,
-
   life,
   maxLife:life,
-
   decay:.006+Math.random()*.002,
-
   gravity
 
  });
@@ -1120,13 +1187,11 @@ function explode(x,y,type,hue){
 
  }
 
-
- // GOLD EMBERS
+ /* GOLD EMBERS */
 
  for(let i=0;i<12;i++){
 
   const a=Math.PI*2*i/12;
-
   const speed=.45+Math.random()*.9;
 
   addParticle(
@@ -1152,23 +1217,19 @@ function drawRocket(r){
   const point=r.trail[i];
 
   ctx.globalAlpha=((i+1)/r.trail.length)*.42;
-
   ctx.fillStyle=`hsl(${r.hue},85%,62%)`;
 
   ctx.beginPath();
-
   ctx.arc(
    point.x,point.y,
    .9+(i/r.trail.length)*.7,
    0,Math.PI*2
   );
-
   ctx.fill();
 
  }
 
  ctx.globalAlpha=.85;
-
  ctx.fillStyle=`hsl(${r.hue},90%,68%)`;
 
  ctx.beginPath();
@@ -1186,11 +1247,8 @@ function drawParticle(p){
  );
 
  ctx.globalAlpha=fade*.78;
-
  ctx.strokeStyle=`hsl(${p.hue},82%,62%)`;
-
  ctx.lineWidth=p.size;
-
  ctx.lineCap="round";
 
  ctx.beginPath();
@@ -1199,7 +1257,6 @@ function drawParticle(p){
  ctx.stroke();
 
  ctx.globalAlpha=fade*.68;
-
  ctx.fillStyle=`hsl(${p.hue},82%,66%)`;
 
  ctx.beginPath();
@@ -1214,11 +1271,8 @@ function frame(){
  if(!running) return;
 
  ctx.globalAlpha=1;
-
  ctx.fillStyle="rgba(3,2,1,0.14)";
-
  ctx.fillRect(0,0,W,H);
-
 
  for(let i=rockets.length-1;i>=0;i--){
 
@@ -1237,7 +1291,6 @@ function frame(){
   }
 
  }
-
 
  for(let i=particles.length-1;i>=0;i--){
 
@@ -1286,7 +1339,6 @@ function startFireworks(){
 
  frame();
 
-
  for(let i=0;i<13;i++){
 
   launchTimers.push(setTimeout(()=>{
@@ -1296,7 +1348,6 @@ function startFireworks(){
   },i*380));
 
  }
-
 
  let extraCount=0;
 
@@ -1312,9 +1363,7 @@ function startFireworks(){
 
    extraCount++;
 
-   launchTimers.push(
-    setTimeout(continuous,1100)
-   );
+   launchTimers.push(setTimeout(continuous,1100));
 
   }
 
@@ -1343,9 +1392,9 @@ function stopFireworks(){
 }
 
 
-/* =================================================
+/* ==============================================
    RECEIVER PERSONAL WISH
-================================================= */
+============================================== */
 
 let greetingStarted=false;
 
@@ -1355,9 +1404,7 @@ function startWelcome(){
 
  const sender=params.get("sender");
 
- if(!sender) return;
-
- if(greetingStarted) return;
+ if(!sender || greetingStarted) return;
 
  greetingStarted=true;
 
@@ -1365,36 +1412,29 @@ function startWelcome(){
 
  if(wish==="default") wish=DEFAULT_WISH;
 
-
  document.getElementById("showWish").textContent=wish;
 
  document.getElementById("showSender").textContent=
- "💌 From: "+sender;
+ "💌 அன்புடன்: "+sender;
 
-
- const intro=document.getElementById("intro");
-
- intro.classList.add("active");
+ document.getElementById("intro").classList.add("active");
 
  startFireworks();
-
 
  const cover=document.getElementById("cover");
 
  const letter=document.getElementById("letter");
 
-
- function openCover(){
+ setTimeout(()=>{
 
   cover.classList.add("open");
 
   document.getElementById("fireworksLabel")
   .classList.add("show");
 
- }
+ },1400);
 
-
- function showLetter(){
+ setTimeout(()=>{
 
   document.getElementById("coverStage").style.opacity="0";
 
@@ -1403,19 +1443,12 @@ function startWelcome(){
   document.getElementById("closeIntro")
   .classList.add("show");
 
- }
-
-
- setTimeout(openCover,1400);
-
- setTimeout(showLetter,2700);
+ },2700);
 
 }
 
 
-/* =================================================
-   BACK TO MAIN PAGE
-================================================= */
+/* BACK TO MAIN */
 
 function closeWelcome(){
 
@@ -1423,24 +1456,17 @@ function closeWelcome(){
 
  greetingStarted=false;
 
- document.getElementById("intro")
- .classList.remove("active");
+ document.getElementById("intro").classList.remove("active");
 
- document.getElementById("cover")
- .classList.remove("open");
+ document.getElementById("cover").classList.remove("open");
 
- document.getElementById("letter")
- .classList.remove("show");
+ document.getElementById("letter").classList.remove("show");
 
- document.getElementById("coverStage")
- .style.opacity="1";
+ document.getElementById("coverStage").style.opacity="1";
 
- document.getElementById("fireworksLabel")
- .classList.remove("show");
+ document.getElementById("fireworksLabel").classList.remove("show");
 
- document.getElementById("closeIntro")
- .classList.remove("show");
-
+ document.getElementById("closeIntro").classList.remove("show");
 
  history.replaceState(
   {},
@@ -1454,27 +1480,22 @@ document.getElementById("closeIntro")
 .addEventListener("click",closeWelcome);
 
 
-/* =================================================
-   PAGE LOAD
-================================================= */
+/* PAGE LOAD */
 
 window.addEventListener("load",()=>{
 
  const video=document.getElementById("bgVideo");
 
  if(video){
-
   video.play().catch(()=>{});
-
  }
 
- // Receiver personal greeting.
+ // Load personal greeting.
 
  startWelcome();
 
 });
 
 </script>
-
 </body>
 </html>
