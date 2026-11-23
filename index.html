@@ -382,10 +382,28 @@ function playTouchSound() {
 }
 function unlockMusic() {
   if (musicUnlocked || musicStarting) return;
-  musicStarting = true; playTouchSound(); music.volume = .8;
-  music.play().then(() => { musicUnlocked = true; musicStarting = false; })
-    .catch(() => { musicStarting = false; });
+
+  musicStarting = true;
+  playTouchSound();
+  music.volume = 0.8;
+
+  music.play()
+    .then(() => {
+      musicUnlocked = true;
+      musicStarting = false;
+    })
+    .catch(error => {
+      musicStarting = false;
+      console.log("Music playback failed:", error);
+    });
 }
+
+["pointerdown", "touchstart", "click", "keydown"].forEach(eventName => {
+  document.addEventListener(eventName, unlockMusic, {
+    capture: true,
+    passive: eventName === "touchstart"
+  });
+});
 const celebrationScreen = document.getElementById("countdownCelebration");
 const celebrationVideo = document.getElementById("celebrationVideo");
 const bigCountdown = document.getElementById("bigCountdown");
