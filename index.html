@@ -20,7 +20,6 @@
  --orange:#e87521;
  --dark:#080604;
 }
-
 *{box-sizing:border-box}
 
 html,body{
@@ -33,13 +32,11 @@ html,body{
  font-family:Arial,sans-serif;
  overscroll-behavior:none;
 }
-
 body{
  display:flex;
  align-items:center;
  justify-content:center;
 }
-
 #app{
  position:relative;
  isolation:isolate;
@@ -60,28 +57,21 @@ body{
  height:100%;
  pointer-events:none;
 }
-
 #bgFallback{
  background:radial-gradient(ellipse at 50% 38%,
  #71300e 0%,#281407 42%,#050403 100%);
 }
-
 #bgVideo{
  z-index:1;
  object-fit:cover;
  filter:brightness(.85) contrast(1.12) saturate(1.25);
- opacity:1;
 }
-
 #videoShade{
  z-index:2;
  background:linear-gradient(
-  180deg,#05040333,
-  #08060422 42%,
-  #03020188
+  180deg,#05040333,#08060422 42%,#03020188
  );
 }
-
 #goldDust{
  z-index:3;
  opacity:.2;
@@ -92,7 +82,6 @@ body{
  background-position:0 0,35px 45px;
  animation:dust 18s linear infinite;
 }
-
 @keyframes dust{
  to{background-position:0 -180px,35px -210px}
 }
@@ -110,7 +99,6 @@ body{
  padding:5% 5% 4%;
  text-align:center;
 }
-
 .brand{
  font-weight:900;
  letter-spacing:4px;
@@ -118,50 +106,37 @@ body{
  color:var(--gold);
  text-shadow:0 0 12px #a66b1e;
 }
-
 .tag{
  font-size:8px;
  letter-spacing:3px;
  color:#e2c17a;
  margin-top:5px;
 }
-
 .hero{margin-top:1%}
-
 .heroTitle{
  font:clamp(28px,8vw,43px) Georgia,serif;
  color:#fff0c4;
  text-shadow:0 0 12px #9a6927;
 }
-
 .year{
  font:bold clamp(76px,21vw,108px) Georgia,serif;
  line-height:1.05;
  color:#ffdf8c;
  text-shadow:0 0 8px #d69a39,0 0 20px #805018;
 }
-
 .sub{
  font-size:11px;
  line-height:1.7;
  color:#f0d9a5;
 }
-
 .timerWrap{width:100%}
-
 .timerTitle{
  font-size:9px;
  letter-spacing:3px;
  color:#f0d18b;
  margin-bottom:8px;
 }
-
-.timer{
- display:flex;
- gap:5px;
- width:100%;
-}
-
+.timer{display:flex;gap:5px;width:100%}
 .unit{
  flex:1;
  min-width:0;
@@ -170,19 +145,16 @@ body{
  border-radius:9px;
  background:#120d08e8;
 }
-
 .unit b{
  display:block;
  font-size:clamp(18px,5vw,24px);
  color:#ffe8ae;
 }
-
 .unit span{
  font-size:7px;
  letter-spacing:1px;
  color:#c6a66a;
 }
-
 .panel{
  width:100%;
  padding:11px 12px;
@@ -191,13 +163,11 @@ body{
  background:#100b07ed;
  box-shadow:0 8px 25px #0008;
 }
-
 .panel h3{
  font:16px Georgia,serif;
  color:#ffe4a1;
  margin:0 0 7px;
 }
-
 input,textarea{
  display:block;
  width:100%;
@@ -210,17 +180,12 @@ input,textarea{
  font-size:12px;
  outline:none;
 }
-
-input:focus,textarea:focus{
- border-color:#f7d98c;
-}
-
+input:focus,textarea:focus{border-color:#f7d98c}
 textarea{
  height:58px;
  resize:none;
  line-height:1.45;
 }
-
 button{
  border:0;
  border-radius:25px;
@@ -231,30 +196,21 @@ button{
  font-weight:bold;
  cursor:pointer;
 }
-
 button:active{transform:scale(.99)}
-
-.send{
- width:100%;
- margin-top:4px;
-}
-
+.send{width:100%;margin-top:4px}
 #status{
  font-size:9px;
  color:#e7c77e;
  min-height:12px;
  margin-top:5px;
 }
-
 .footer{
  font-size:8px;
  letter-spacing:2px;
  color:#c0a16a;
 }
 
-/* =================================================
-   LAST 10 SECONDS - 3D CELEBRATION VIDEO
-================================================= */
+/* LAST 10 SECONDS 3D CELEBRATION */
 
 #countdownCelebration{
  position:absolute;
@@ -264,10 +220,7 @@ button:active{transform:scale(.99)}
  overflow:hidden;
  background:#030201;
 }
-
-#countdownCelebration.active{
- display:block;
-}
+#countdownCelebration.active{display:block}
 
 #celebrationVideo{
  position:absolute;
@@ -278,27 +231,18 @@ button:active{transform:scale(.99)}
  background:#030201;
  filter:brightness(.95) contrast(1.12) saturate(1.3);
 }
-
 .celebrationShade{
  position:absolute;
  inset:0;
- background:
- linear-gradient(
-  180deg,
-  #0005 0%,
-  transparent 35%,
-  #0005 75%,
-  #000b 100%
+ background:linear-gradient(
+  180deg,#0005 0%,transparent 35%,#0005 75%,#000b 100%
  );
  pointer-events:none;
 }
-
-/* COUNTDOWN NUMBERS */
-
 #bigCountdown{
  position:absolute;
- inset:0;
  z-index:2;
+ inset:0;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -310,19 +254,12 @@ button:active{transform:scale(.99)}
  0 0 90px #ff9c21;
  animation:countPop .9s ease infinite alternate;
 }
-
 @keyframes countPop{
- from{
-  transform:scale(.8);
-  opacity:.7;
- }
- to{
-  transform:scale(1.12);
-  opacity:1;
- }
+ from{transform:scale(.8);opacity:.7}
+ to{transform:scale(1.12);opacity:1}
 }
 
-/* FINAL NEW YEAR SCREEN */
+/* FINAL SCREEN */
 
 #newYearFinal{
  position:absolute;
@@ -338,65 +275,33 @@ button:active{transform:scale(.99)}
  color:#ffe6a3;
  text-shadow:0 0 20px #ff9c21;
 }
-
 #newYearFinal.show{
  display:flex;
  animation:grandEntry 1.5s ease both;
 }
-
 #newYearFinal div{
  font:clamp(24px,7vw,39px) Georgia,serif;
 }
-
 #newYearFinal strong{
  font:bold clamp(100px,30vw,155px) Georgia,serif;
  color:#ffd16c;
- text-shadow:
- 0 0 15px #ffb52e,
- 0 0 45px #ff7900,
- 0 0 90px #ff9c21;
+ text-shadow:0 0 15px #ffb52e,0 0 45px #ff7900,0 0 90px #ff9c21;
 }
-
 #newYearFinal span{
  font-size:9px;
  letter-spacing:3px;
  line-height:1.8;
 }
-
 #newYearFinal small{
  font-size:12px;
  letter-spacing:3px;
 }
-
 @keyframes grandEntry{
- from{
-  opacity:0;
-  transform:scale(.3);
- }
- to{
-  opacity:1;
-  transform:scale(1);
- }
+ from{opacity:0;transform:scale(.3)}
+ to{opacity:1;transform:scale(1)}
 }
 
-/* TOUCH INDICATOR */
-
-#touchSound{
- position:absolute;
- z-index:5;
- bottom:15px;
- left:50%;
- transform:translateX(-50%);
- color:#ffe5a0;
- font-size:9px;
- letter-spacing:2px;
- white-space:nowrap;
- pointer-events:none;
-}
-
-/* =================================================
-   RECEIVER SCREEN
-================================================= */
+/* RECEIVER SCREEN */
 
 #intro{
  position:absolute;
@@ -404,11 +309,10 @@ button:active{transform:scale(.99)}
  inset:0;
  display:none;
  overflow:hidden;
- background:
- radial-gradient(ellipse at 50% 35%,
- #54220d 0%,#1b0c06 42%,#030201 100%);
+ background:radial-gradient(
+  ellipse at 50% 35%,#54220d 0%,#1b0c06 42%,#030201 100%
+ );
 }
-
 #intro.active{display:block}
 
 #sky{
@@ -418,9 +322,6 @@ button:active{transform:scale(.99)}
  height:100%;
  pointer-events:none;
 }
-
-/* GOLD PARTICLE BACKGROUND */
-
 #intro::before{
  content:"";
  position:absolute;
@@ -434,7 +335,7 @@ button:active{transform:scale(.99)}
  animation:dust 15s linear infinite;
 }
 
-/* COVER AREA */
+/* COVER */
 
 #coverStage{
  position:absolute;
@@ -449,20 +350,16 @@ button:active{transform:scale(.99)}
  perspective:1000px;
  transition:opacity .8s ease,transform .8s ease;
 }
-
 #cover{
  position:relative;
  width:100%;
  height:100%;
  border:1px solid #d58b35;
  border-radius:14px;
- background:
- radial-gradient(ellipse at 50% 25%,
- #84380f 0%,#321507 55%,#100803 100%);
- box-shadow:
- 0 0 18px #e8752140,
- 0 20px 60px #000e,
- inset 0 0 30px #f5a13a18;
+ background:radial-gradient(
+  ellipse at 50% 25%,#84380f 0%,#321507 55%,#100803 100%
+ );
+ box-shadow:0 0 18px #e8752140,0 20px 60px #000e,inset 0 0 30px #f5a13a18;
  display:flex;
  flex-direction:column;
  align-items:center;
@@ -470,7 +367,6 @@ button:active{transform:scale(.99)}
  transform-style:preserve-3d;
  transition:transform 1.2s ease,opacity 1s ease;
 }
-
 #cover::before{
  content:"";
  position:absolute;
@@ -479,33 +375,28 @@ button:active{transform:scale(.99)}
  border-radius:9px;
  pointer-events:none;
 }
-
 .coverBrand{
  font-size:12px;
  letter-spacing:5px;
  color:#e9b96b;
 }
-
 .coverLine{
  width:65%;
  height:1px;
  background:linear-gradient(90deg,transparent,#ffdb8a,transparent);
  margin:20px 0;
 }
-
 .coverTitle{
  font:clamp(32px,10vw,50px) Georgia,serif;
  color:#ffe1a0;
  text-shadow:0 0 20px #e87521;
  text-align:center;
 }
-
 .coverYear{
  font:bold clamp(65px,18vw,95px) Georgia,serif;
  color:#ffc56c;
  text-shadow:0 0 18px #e87521,0 4px 10px #000;
 }
-
 .coverHint{
  position:absolute;
  bottom:23px;
@@ -514,13 +405,7 @@ button:active{transform:scale(.99)}
  letter-spacing:2px;
  animation:hintPulse 1.5s infinite;
 }
-
-@keyframes hintPulse{
- 50%{opacity:.45}
-}
-
-/* OPENING COVER */
-
+@keyframes hintPulse{50%{opacity:.45}}
 #cover.open{
  transform:rotateY(-110deg) scale(.88);
  opacity:0;
@@ -538,53 +423,41 @@ button:active{transform:scale(.99)}
  padding:28px 17px 24px;
  border:1px solid #e5b65e;
  border-radius:8px;
- background:
- linear-gradient(145deg,#fff0c9 0%,#f2d29a 48%,#e6b873 100%);
+ background:linear-gradient(145deg,#fff0c9 0%,#f2d29a 48%,#e6b873 100%);
  color:#381b0a;
- box-shadow:
- 0 0 30px #e8752166,
- 0 20px 55px #000e,
- inset 0 0 18px #fff8d6;
+ box-shadow:0 0 30px #e8752166,0 20px 55px #000e,inset 0 0 18px #fff8d6;
  text-align:center;
  opacity:0;
  transform:translateY(90px) scale(.65) rotateX(12deg);
  transform-origin:bottom center;
- transition:
- opacity 1.2s ease,
- transform 1.2s cubic-bezier(.2,.8,.2,1);
+ transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.8,.2,1);
 }
-
 #letter.show{
  opacity:1;
  transform:translateY(0) scale(1) rotateX(0);
 }
-
 .letterTop{
  font-size:9px;
  letter-spacing:3px;
  color:#9a541d;
 }
-
 .letterDivider{
  width:70%;
  height:1px;
  margin:13px auto;
  background:linear-gradient(90deg,transparent,#a86a26,transparent);
 }
-
 .letterTitle{
  font:clamp(32px,9vw,45px) Georgia,serif;
  color:#9b4514;
  text-shadow:0 1px 0 #fff4d8;
  margin:8px 0;
 }
-
 .letterYear{
  font:bold clamp(42px,12vw,62px) Georgia,serif;
  color:#b65b19;
  text-shadow:0 2px 2px #fff2c4;
 }
-
 #showWish{
  font:15px Georgia,serif;
  line-height:1.65;
@@ -593,13 +466,11 @@ button:active{transform:scale(.99)}
  overflow-wrap:anywhere;
  margin-top:14px;
 }
-
 #showSender{
  font:bold 13px Georgia,serif;
  color:#8e4013;
  margin-top:18px;
 }
-
 .letterHeart{
  font-size:19px;
  margin-top:10px;
@@ -620,7 +491,6 @@ button:active{transform:scale(.99)}
  opacity:0;
  transition:opacity 1s;
 }
-
 #fireworksLabel.show{opacity:1}
 
 /* CLOSE */
@@ -641,15 +511,10 @@ button:active{transform:scale(.99)}
  opacity:0;
  transition:opacity 1s;
 }
-
 #closeIntro.show{opacity:1}
 
 @media(max-height:650px){
- #main{
-  padding-top:3%;
-  padding-bottom:2%;
- }
-
+ #main{padding-top:3%;padding-bottom:2%}
  .panel{padding:8px 10px}
  textarea{height:48px}
  .unit{padding:6px 2px}
@@ -663,8 +528,6 @@ button:active{transform:scale(.99)}
 <body>
 
 <div id="app">
-
- <!-- MAIN BACKGROUND -->
 
  <div id="bgFallback"></div>
 
@@ -696,30 +559,14 @@ button:active{transform:scale(.99)}
   <section class="timerWrap">
    <div class="timerTitle">NEW YEAR COUNTDOWN</div>
    <div class="timer">
-    <div class="unit">
-     <b id="days">00</b>
-     <span>DAYS</span>
-    </div>
-
-    <div class="unit">
-     <b id="hours">00</b>
-     <span>HOURS</span>
-    </div>
-
-    <div class="unit">
-     <b id="minutes">00</b>
-     <span>MINUTES</span>
-    </div>
-
-    <div class="unit">
-     <b id="seconds">00</b>
-     <span>SECONDS</span>
-    </div>
+    <div class="unit"><b id="days">00</b><span>DAYS</span></div>
+    <div class="unit"><b id="hours">00</b><span>HOURS</span></div>
+    <div class="unit"><b id="minutes">00</b><span>MINUTES</span></div>
+    <div class="unit"><b id="seconds">00</b><span>SECONDS</span></div>
    </div>
   </section>
 
   <section class="panel">
-
    <h3>💌 Send Your Wishes</h3>
 
    <input id="sender" maxlength="45"
@@ -734,7 +581,6 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
    </button>
 
    <div id="status" role="status" aria-live="polite"></div>
-
   </section>
 
   <footer class="footer">WITH LOVE ❤️ VRPAIData</footer>
@@ -742,17 +588,12 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
  </main>
 
 
- <!-- =================================================
-      LAST 10 SECONDS CELEBRATION
- ================================================== -->
+ <!-- LAST 10 SECONDS CELEBRATION -->
 
  <section id="countdownCelebration">
 
   <video id="celebrationVideo"
-         muted
-         playsinline
-         preload="auto"
-         loop>
+   muted playsinline preload="auto" loop>
    <source src="newyear-3d.mp4" type="video/mp4">
   </video>
 
@@ -763,22 +604,20 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
   <div id="newYearFinal">
    <div>🎆 HAPPY NEW YEAR 🎆</div>
    <strong>2027</strong>
-   <span>
-    WELCOME TO A BEAUTIFUL<br>
-    NEW BEGINNING
-   </span>
+   <span>WELCOME TO A BEAUTIFUL<br>NEW BEGINNING</span>
    <small>WITH LOVE ❤️ VRPAIData</small>
   </div>
 
  </section>
 
 
- <!-- CELEBRATION MUSIC -->
+ <!-- MUSIC: STARTS ON FIRST SCREEN TOUCH -->
 
  <audio id="newYearMusic"
-        src="newyear-song.mp3"
-        preload="auto"
-        loop>
+  src="newyear-song.mp3"
+  preload="auto"
+  loop
+  playsinline>
  </audio>
 
 
@@ -793,17 +632,12 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
   </div>
 
   <div id="coverStage">
-
    <div id="cover">
 
     <div class="coverBrand">VRPAIData</div>
-
     <div class="coverLine"></div>
-
     <div class="coverTitle">Happy New Year</div>
-
     <div class="coverYear">2027</div>
-
     <div class="coverLine"></div>
 
     <div class="coverHint">
@@ -811,32 +645,20 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
     </div>
 
    </div>
-
   </div>
-
-
-  <!-- OPENING LETTER -->
 
   <div id="letter">
 
    <div class="letterTop">A SPECIAL MESSAGE FOR YOU</div>
-
    <div class="letterDivider"></div>
-
    <div class="letterTitle">Happy New Year</div>
-
    <div class="letterYear">2027</div>
-
    <div class="letterDivider"></div>
-
    <div id="showWish"></div>
-
    <div id="showSender"></div>
-
    <div class="letterHeart">❤️</div>
 
   </div>
-
 
   <button id="closeIntro" type="button">
    BACK TO VRPAIData
@@ -850,18 +672,13 @@ Wishing You Happiness, Love & Success in 2027!</textarea>
 <script>
 "use strict";
 
-
-/* =================================================
-   DEFAULT WISH
-================================================= */
+/* DEFAULT WISH */
 
 const DEFAULT_WISH =
 "✨ இனிய புத்தாண்டு நல்வாழ்த்துக்கள்! ❤️\nWishing You Happiness, Love & Success in 2027!";
 
 
-/* =================================================
-   ELEMENTS
-================================================= */
+/* ELEMENTS */
 
 const music = document.getElementById("newYearMusic");
 
@@ -879,104 +696,59 @@ document.getElementById("newYearFinal");
 
 
 /* =================================================
-   TOUCH SOUND + AUDIO UNLOCK
+   MUSIC - FIRST TOUCH STARTS SONG IMMEDIATELY
 ================================================= */
 
 let musicUnlocked = false;
-let audioContext = null;
-
-function playTouchSound(){
-
- try{
-
-  const AudioContext =
-   window.AudioContext || window.webkitAudioContext;
-
-  if(!AudioContext) return;
-
-  if(!audioContext){
-   audioContext = new AudioContext();
-  }
-
-  if(audioContext.state === "suspended"){
-   audioContext.resume();
-  }
-
-  const oscillator =
-   audioContext.createOscillator();
-
-  const gain =
-   audioContext.createGain();
-
-  oscillator.type = "sine";
-
-  oscillator.frequency.setValueAtTime(
-   880,
-   audioContext.currentTime
-  );
-
-  oscillator.frequency.exponentialRampToValueAtTime(
-   1320,
-   audioContext.currentTime + .16
-  );
-
-  gain.gain.setValueAtTime(
-   .0001,
-   audioContext.currentTime
-  );
-
-  gain.gain.exponentialRampToValueAtTime(
-   .12,
-   audioContext.currentTime + .025
-  );
-
-  gain.gain.exponentialRampToValueAtTime(
-   .0001,
-   audioContext.currentTime + .35
-  );
-
-  oscillator.connect(gain);
-  gain.connect(audioContext.destination);
-
-  oscillator.start();
-
-  oscillator.stop(audioContext.currentTime + .36);
-
- }catch(error){
-
-  console.log("Touch sound unavailable:",error);
-
- }
-}
-
 
 function unlockMusic(){
 
  if(musicUnlocked) return;
 
- musicUnlocked = true;
+ // Start playback directly inside the user gesture.
+ music.volume = 0.85;
 
- playTouchSound();
+ const playPromise = music.play();
+
+ if(playPromise){
+
+  playPromise.then(()=>{
+
+   musicUnlocked = true;
+
+   console.log("New Year song started!");
+
+  }).catch(error=>{
+
+   console.log("Music playback blocked. Touch again.",error);
+
+  });
+
+ }else{
+
+  musicUnlocked = true;
+
+ }
 
 }
 
-
-/* FIRST SCREEN TOUCH */
+/*
+ Keep listener active until playback succeeds.
+ This also allows another touch if the first attempt fails.
+*/
 
 document.addEventListener(
  "pointerdown",
- unlockMusic,
- {once:true}
+ unlockMusic
 );
 
 
 /* =================================================
-   COUNTDOWN CELEBRATION CONTROL
+   COUNTDOWN CELEBRATION
 ================================================= */
 
 let celebrationStarted = false;
 let celebrationFinished = false;
-
 
 function startCountdownCelebration(){
 
@@ -992,56 +764,21 @@ function startCountdownCelebration(){
 
  bigCountdown.textContent = "10";
 
- /* START 3D VIDEO */
-
+ // Start the 3D video.
  celebrationVideo.currentTime = 0;
 
  celebrationVideo.play().catch(error=>{
 
-  console.log("Celebration video error:",error);
+  console.log("Celebration video unavailable:",error);
 
  });
 
-
- /* START MUSIC */
-
- if(musicUnlocked){
-
-  music.volume = 0;
-
-  music.currentTime = 0;
-
-  music.play().then(()=>{
-
-   const fadeIn = setInterval(()=>{
-
-    if(music.volume < .8){
-
-     music.volume = Math.min(
-      .8,
-      music.volume + .08
-     );
-
-    }else{
-
-     clearInterval(fadeIn);
-
-    }
-
-   },150);
-
-  }).catch(error=>{
-
-   console.log("Music playback error:",error);
-
-  });
-
- }
+ // IMPORTANT:
+ // Music is NOT restarted here.
+ // Music has already started on the first screen touch.
 
 }
 
-
-/* COUNTDOWN NUMBER */
 
 function updateGrandCountdown(remaining){
 
@@ -1059,8 +796,6 @@ function updateGrandCountdown(remaining){
 
 }
 
-
-/* FINAL CELEBRATION */
 
 function finishNewYearCelebration(){
 
@@ -1080,8 +815,7 @@ function finishNewYearCelebration(){
 ================================================= */
 
 const NEW_YEAR_TARGET =
- new Date("2027-01-01T00:00:00+05:30").getTime();
-
+new Date("2027-01-01T00:00:00+05:30").getTime();
 
 function updateTimer(){
 
@@ -1090,26 +824,20 @@ function updateTimer(){
   NEW_YEAR_TARGET - Date.now()
  );
 
-
- /* MAIN TIMER */
-
  document.getElementById("days").textContent =
  String(Math.floor(remaining/86400000)).padStart(2,"0");
-
 
  document.getElementById("hours").textContent =
  String(Math.floor(remaining%86400000/3600000)).padStart(2,"0");
 
-
  document.getElementById("minutes").textContent =
  String(Math.floor(remaining%3600000/60000)).padStart(2,"0");
-
 
  document.getElementById("seconds").textContent =
  String(Math.floor(remaining%60000/1000)).padStart(2,"0");
 
 
- /* LAST 10 SECONDS */
+ // Last 10 seconds.
 
  if(remaining <= 10000){
 
@@ -1120,7 +848,6 @@ function updateTimer(){
  }
 
 }
-
 
 updateTimer();
 
@@ -1142,7 +869,6 @@ async function sendWish(){
  const status =
  document.getElementById("status");
 
-
  if(!name){
 
   alert("Please enter Sender Name / அனுப்புநர் பெயர்");
@@ -1152,7 +878,6 @@ async function sendWish(){
   return;
 
  }
-
 
  const shareURL = new URL(location.href);
 
@@ -1166,15 +891,12 @@ async function sendWish(){
   message === DEFAULT_WISH ? "default" : message
  );
 
-
  const link = shareURL.toString();
-
 
  const shareText =
  "🎆 Happy New Year 2027!\n"+
  "💌 From: "+name+
  "\n\n✨ Open Your Wishes:\n"+link;
-
 
  if(navigator.share){
 
@@ -1208,13 +930,12 @@ async function sendWish(){
 
 }
 
-
 document.getElementById("sendButton")
 .addEventListener("click",sendWish);
 
 
 /* =================================================
-   FIREWORKS ENGINE - RECEIVER
+   FIREWORKS ENGINE
 ================================================= */
 
 const canvas = document.getElementById("sky");
@@ -1227,7 +948,6 @@ let particles=[];
 let rockets=[];
 
 let animationFrame=0;
-
 let running=false;
 
 let launchTimers=[];
@@ -1246,13 +966,11 @@ function resizeCanvas(){
  H=canvas.clientHeight;
 
  canvas.width=Math.max(1,Math.floor(W*dpr));
-
  canvas.height=Math.max(1,Math.floor(H*dpr));
 
  ctx.setTransform(dpr,0,0,dpr,0,0);
 
 }
-
 
 window.addEventListener("resize",()=>{
 
@@ -1284,19 +1002,15 @@ function launchRocket(type){
 }
 
 
-function addParticle(
- x,y,vx,vy,hue,size,life,gravity
-){
+function addParticle(x,y,vx,vy,hue,size,life,gravity){
 
  particles.push({
 
   x,y,
-
   oldX:x,
   oldY:y,
 
   vx,vy,
-
   hue,size,
 
   life,
@@ -1322,127 +1036,80 @@ function explode(x,y,type,hue){
   let speed=1.7+Math.random()*1.7;
 
   let vx=Math.cos(angle)*speed;
-
   let vy=Math.sin(angle)*speed;
-
 
   switch(type%13){
 
    case 1:
-
     speed=3+Math.random();
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
-
 
    case 2:
-
     speed=(i%2?3.7:1.2);
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
-
 
    case 3:
-
     vx*=.58;
     vy*=1.45;
-
     break;
-
 
    case 4:
-
     vx*=1.45;
     vy*=.68;
-
     break;
-
 
    case 5:
-
     speed=1+Math.random()*4;
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
-
 
    case 6:
-
     speed=(i%3===0?4.2:1.7);
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
-
 
    case 7:{
-
     const a=Math.PI*2*Math.floor(i/4)/16;
-
     vx=Math.cos(a)*speed;
     vy=Math.sin(a)*speed;
-
     break;
-
    }
 
-
    case 8:
-
     vx*=1.25;
     vy*=.7;
-
     break;
-
 
    case 9:
-
     vx*=.7;
     vy*=1.25;
-
     break;
-
 
    case 10:
-
     speed=2+Math.sin(i*4)*.8;
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
-
 
    case 11:
-
     speed=1+Math.random()*4.2;
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
 
-
    case 12:
-
     speed=1.8+Math.random()*3.2;
-
     vx=Math.cos(angle)*speed;
     vy=Math.sin(angle)*speed;
-
     break;
 
   }
-
 
   addParticle(
    x,y,vx,vy,hue,
@@ -1454,7 +1121,7 @@ function explode(x,y,type,hue){
  }
 
 
- /* GOLD EMBERS */
+ // GOLD EMBERS
 
  for(let i=0;i<12;i++){
 
@@ -1480,7 +1147,6 @@ function drawRocket(r){
 
  if(r.trail.length>7) r.trail.shift();
 
-
  for(let i=0;i<r.trail.length;i++){
 
   const point=r.trail[i];
@@ -1492,26 +1158,21 @@ function drawRocket(r){
   ctx.beginPath();
 
   ctx.arc(
-   point.x,
-   point.y,
+   point.x,point.y,
    .9+(i/r.trail.length)*.7,
-   0,
-   Math.PI*2
+   0,Math.PI*2
   );
 
   ctx.fill();
 
  }
 
-
  ctx.globalAlpha=.85;
 
  ctx.fillStyle=`hsl(${r.hue},90%,68%)`;
 
  ctx.beginPath();
-
  ctx.arc(r.x,r.y,1.5,0,Math.PI*2);
-
  ctx.fill();
 
 }
@@ -1533,22 +1194,16 @@ function drawParticle(p){
  ctx.lineCap="round";
 
  ctx.beginPath();
-
  ctx.moveTo(p.oldX,p.oldY);
-
  ctx.lineTo(p.x,p.y);
-
  ctx.stroke();
-
 
  ctx.globalAlpha=fade*.68;
 
  ctx.fillStyle=`hsl(${p.hue},82%,66%)`;
 
  ctx.beginPath();
-
  ctx.arc(p.x,p.y,p.size*.55,0,Math.PI*2);
-
  ctx.fill();
 
 }
@@ -1558,17 +1213,12 @@ function frame(){
 
  if(!running) return;
 
-
- /* SOFT TRAIL */
-
  ctx.globalAlpha=1;
 
  ctx.fillStyle="rgba(3,2,1,0.14)";
 
  ctx.fillRect(0,0,W,H);
 
-
- /* ROCKETS */
 
  for(let i=rockets.length-1;i>=0;i--){
 
@@ -1577,7 +1227,6 @@ function frame(){
   r.y-=r.speed;
 
   drawRocket(r);
-
 
   if(r.y<=r.targetY){
 
@@ -1589,8 +1238,6 @@ function frame(){
 
  }
 
-
- /* PARTICLES */
 
  for(let i=particles.length-1;i>=0;i--){
 
@@ -1611,7 +1258,6 @@ function frame(){
 
   drawParticle(p);
 
-
   if(p.life<=0){
 
    particles.splice(i,1);
@@ -1619,7 +1265,6 @@ function frame(){
   }
 
  }
-
 
  ctx.globalAlpha=1;
 
@@ -1642,8 +1287,6 @@ function startFireworks(){
  frame();
 
 
- /* SEQUENTIAL FIREWORKS */
-
  for(let i=0;i<13;i++){
 
   launchTimers.push(setTimeout(()=>{
@@ -1654,8 +1297,6 @@ function startFireworks(){
 
  }
 
-
- /* CONTINUOUS FIREWORKS */
 
  let extraCount=0;
 
@@ -1679,9 +1320,7 @@ function startFireworks(){
 
  };
 
- launchTimers.push(
-  setTimeout(continuous,5000)
- );
+ launchTimers.push(setTimeout(continuous,5000));
 
 }
 
@@ -1705,11 +1344,10 @@ function stopFireworks(){
 
 
 /* =================================================
-   RECEIVER LETTER ANIMATION
+   RECEIVER PERSONAL WISH
 ================================================= */
 
 let greetingStarted=false;
-
 
 function startWelcome(){
 
@@ -1723,13 +1361,10 @@ function startWelcome(){
 
  greetingStarted=true;
 
-
  let wish=params.get("wish")||"default";
 
  if(wish==="default") wish=DEFAULT_WISH;
 
-
- /* PERSONAL MESSAGE */
 
  document.getElementById("showWish").textContent=wish;
 
@@ -1737,12 +1372,9 @@ function startWelcome(){
  "💌 From: "+sender;
 
 
- /* OPEN RECEIVER SCREEN */
-
  const intro=document.getElementById("intro");
 
  intro.classList.add("active");
-
 
  startFireworks();
 
@@ -1752,21 +1384,17 @@ function startWelcome(){
  const letter=document.getElementById("letter");
 
 
- /* COVER OPENS */
-
- const openCover=()=>{
+ function openCover(){
 
   cover.classList.add("open");
 
   document.getElementById("fireworksLabel")
   .classList.add("show");
 
- };
+ }
 
 
- /* LETTER APPEARS */
-
- const showLetter=()=>{
+ function showLetter(){
 
   document.getElementById("coverStage").style.opacity="0";
 
@@ -1775,7 +1403,7 @@ function startWelcome(){
   document.getElementById("closeIntro")
   .classList.add("show");
 
- };
+ }
 
 
  setTimeout(openCover,1400);
@@ -1795,32 +1423,24 @@ function closeWelcome(){
 
  greetingStarted=false;
 
-
  document.getElementById("intro")
  .classList.remove("active");
-
 
  document.getElementById("cover")
  .classList.remove("open");
 
-
  document.getElementById("letter")
  .classList.remove("show");
-
 
  document.getElementById("coverStage")
  .style.opacity="1";
 
-
  document.getElementById("fireworksLabel")
  .classList.remove("show");
-
 
  document.getElementById("closeIntro")
  .classList.remove("show");
 
-
- /* CLEAR SHARE PARAMETERS */
 
  history.replaceState(
   {},
@@ -1829,7 +1449,6 @@ function closeWelcome(){
  );
 
 }
-
 
 document.getElementById("closeIntro")
 .addEventListener("click",closeWelcome);
@@ -1849,8 +1468,7 @@ window.addEventListener("load",()=>{
 
  }
 
-
- /* RECEIVER PERSONAL WISH */
+ // Receiver personal greeting.
 
  startWelcome();
 
