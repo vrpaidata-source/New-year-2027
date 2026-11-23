@@ -667,7 +667,7 @@ onAuthStateChanged(auth, async user => {
     if (user.isAnonymous) {
       await bootAnonymousTracking(user);
     } else {
-      trackingReadyResolve(false);
+      trackingReadyResolve(true);
       updateAdminUI(user);
     }
   } catch (error) {
