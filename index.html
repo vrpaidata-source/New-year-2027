@@ -11,15 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="VRPAIData">
 <meta property="og:title" content="🎆 Happy New Year 2027 | VRPAIData">
-<meta property="og:description" content="✨ இனிய புத்தாண்டு நல்வாழ்த்துகள்! அன்புடன் VRPAIData.">
+<meta property="og:description" content="இனிய புத்தாண்டு நல்வாழ்த்துகள்! அன்புடன் VRPAIData.">
 <meta property="og:url" content="https://vrpaidata-source.github.io/New-year-2027/">
 <meta property="og:image" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
-<meta property="og:image:secure_url" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
-<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://vrpaidata-source.github.io/New-year-2027/newyear-preview.jpg">
 
 <style>
 :root{
@@ -59,6 +56,8 @@ body{
  border:1px solid #98702b;
 }
 
+/* MAIN BACKGROUND */
+
 #bgFallback,#bgVideo,#videoShade,#goldDust{
  position:absolute;
  inset:0;
@@ -96,6 +95,8 @@ body{
 @keyframes dust{
  to{background-position:0 -180px,35px -210px}
 }
+
+/* MAIN PAGE */
 
 #main{
  position:absolute;
@@ -212,9 +213,11 @@ input,textarea{
 input:focus,textarea:focus{border-color:#f7d98c}
 
 textarea{
- height:58px;
- resize:none;
- line-height:1.45;
+ height:110px;
+ resize:vertical;
+ line-height:1.5;
+ overflow-y:auto;
+ font-family:Arial,sans-serif;
 }
 
 button{
@@ -376,13 +379,15 @@ button:active{transform:scale(.99)}
  animation:dust 15s linear infinite;
 }
 
+/* COVER */
+
 #coverStage{
  position:absolute;
  z-index:2;
  left:8%;
  right:8%;
- top:22%;
- height:53%;
+ top:17%;
+ height:58%;
  display:flex;
  align-items:center;
  justify-content:center;
@@ -457,29 +462,36 @@ button:active{transform:scale(.99)}
  opacity:0;
 }
 
+/* LETTER - MOVED UP + SCROLLABLE */
+
 #letter{
  position:absolute;
  z-index:3;
- left:8%;
- right:8%;
- top:24%;
- min-height:48%;
- padding:28px 17px 24px;
+ left:7%;
+ right:7%;
+ top:12%;
+ bottom:12%;
+ max-height:76%;
+ padding:20px 16px 24px;
  border:1px solid #e5b65e;
- border-radius:8px;
+ border-radius:10px;
  background:linear-gradient(145deg,#fff0c9 0%,#f2d29a 48%,#e6b873 100%);
  color:#381b0a;
  box-shadow:0 0 30px #e8752166,0 20px 55px #000e,inset 0 0 18px #fff8d6;
  text-align:center;
+ overflow-y:auto;
+ overscroll-behavior:contain;
  opacity:0;
- transform:translateY(90px) scale(.65) rotateX(12deg);
- transform-origin:bottom center;
+ transform:translateY(65px) scale(.78);
+ transform-origin:center;
  transition:opacity 1.2s ease,transform 1.2s cubic-bezier(.2,.8,.2,1);
+ scrollbar-width:thin;
+ scrollbar-color:#a86a26 transparent;
 }
 
 #letter.show{
  opacity:1;
- transform:translateY(0) scale(1) rotateX(0);
+ transform:translateY(0) scale(1);
 }
 
 .letterTop{
@@ -491,47 +503,47 @@ button:active{transform:scale(.99)}
 .letterDivider{
  width:70%;
  height:1px;
- margin:13px auto;
+ margin:10px auto;
  background:linear-gradient(90deg,transparent,#a86a26,transparent);
 }
 
 .letterTitle{
- font:clamp(32px,9vw,45px) Georgia,serif;
+ font:clamp(29px,8vw,42px) Georgia,serif;
  color:#9b4514;
  text-shadow:0 1px 0 #fff4d8;
- margin:8px 0;
+ margin:6px 0;
 }
 
 .letterYear{
- font:bold clamp(42px,12vw,62px) Georgia,serif;
+ font:bold clamp(38px,11vw,58px) Georgia,serif;
  color:#b65b19;
  text-shadow:0 2px 2px #fff2c4;
 }
 
 #showWish{
- font:15px Georgia,serif;
- line-height:1.65;
+ font:clamp(13px,3.8vw,15px) Georgia,serif;
+ line-height:1.55;
  color:#45230e;
  white-space:pre-wrap;
  overflow-wrap:anywhere;
- margin-top:14px;
+ margin-top:10px;
 }
 
 #showSender{
  font:bold 13px Georgia,serif;
  color:#8e4013;
- margin-top:18px;
+ margin-top:14px;
 }
 
 .letterHeart{
  font-size:19px;
- margin-top:10px;
+ margin-top:8px;
 }
 
 #fireworksLabel{
  position:absolute;
  z-index:4;
- top:8%;
+ top:5%;
  left:0;
  right:0;
  text-align:center;
@@ -547,7 +559,7 @@ button:active{transform:scale(.99)}
 #closeIntro{
  position:absolute;
  z-index:6;
- bottom:22px;
+ bottom:2%;
  left:50%;
  transform:translateX(-50%);
  padding:10px 22px;
@@ -559,6 +571,7 @@ button:active{transform:scale(.99)}
  letter-spacing:1px;
  opacity:0;
  transition:opacity 1s;
+ white-space:nowrap;
 }
 
 #closeIntro.show{opacity:1}
@@ -566,11 +579,17 @@ button:active{transform:scale(.99)}
 @media(max-height:650px){
  #main{padding-top:3%;padding-bottom:2%}
  .panel{padding:8px 10px}
- textarea{height:48px}
+ textarea{height:85px}
  .unit{padding:6px 2px}
- #coverStage{top:18%;height:57%}
- #letter{top:20%;min-height:52%;padding:18px 13px}
+ #letter{top:9%;bottom:10%;max-height:81%;padding:14px 12px}
  #showWish{font-size:13px}
+ #coverStage{top:15%;height:60%}
+}
+
+@media(max-width:380px){
+ .panel{padding:9px}
+ textarea{height:95px}
+ #letter{left:6%;right:6%;padding:16px 12px}
 }
 </style>
 </head>
@@ -619,17 +638,10 @@ button:active{transform:scale(.99)}
  <input id="sender" maxlength="45" autocomplete="name"
   placeholder="Sender Name / அனுப்புநர் பெயர்">
 
- <textarea id="wish" maxlength="600">🎆 இனிய புத்தாண்டு நல்வாழ்த்துகள் – 2027! 🎆
-
-இந்தப் புத்தாண்டு உங்கள் வாழ்வில் மகிழ்ச்சி, ஆரோக்கியம், செல்வம், வெற்றி மற்றும் மனநிறைவைத் தரட்டும்.
-
-✨ உங்கள் கனவுகள் அனைத்தும் நனவாகட்டும்!
-✨ குடும்பத்தில் அன்பும் அமைதியும் நிலைக்கட்டும்!
-
-❤️ அன்புடன் நான்..!!</textarea><
+ <textarea id="wish" maxlength="600"></textarea>
 
  <button class="send" id="sendButton" type="button">
-  🎁 SEND WISHES ON WHATSAPP
+  🎁 SEND WISHES
  </button>
 
  <div id="status" role="status" aria-live="polite"></div>
@@ -637,6 +649,7 @@ button:active{transform:scale(.99)}
 
 <footer class="footer">WITH LOVE ❤️ VRPAIData</footer>
 </main>
+
 
 <!-- LAST 10 SECONDS CELEBRATION -->
 
@@ -657,9 +670,11 @@ button:active{transform:scale(.99)}
  </div>
 </section>
 
+
 <!-- MUSIC -->
 
 <audio id="newYearMusic" src="newyear-song.mp3" preload="auto" loop></audio>
+
 
 <!-- RECEIVER SCREEN -->
 
@@ -704,14 +719,18 @@ button:active{transform:scale(.99)}
 const DEFAULT_WISH =
 `🎆 இனிய புத்தாண்டு நல்வாழ்த்துகள் – 2027! 🎆
 
-💌 அன்புடன் – VRPAIData
-
 இந்தப் புத்தாண்டு உங்கள் வாழ்வில் மகிழ்ச்சி, ஆரோக்கியம், செல்வம், வெற்றி மற்றும் மனநிறைவைத் தரட்டும்.
 
 ✨ உங்கள் கனவுகள் அனைத்தும் நனவாகட்டும்!
 ✨ குடும்பத்தில் அன்பும் அமைதியும் நிலைக்கட்டும்!
 
-❤️ TEAM VRPAIData`;
+❤️ அன்புடன் – VRPAIData`;
+
+
+/* SET DEFAULT WISH IN EDITABLE BOX */
+
+const wishBox = document.getElementById("wish");
+wishBox.value = DEFAULT_WISH;
 
 
 /* ELEMENTS */
@@ -723,13 +742,14 @@ const bigCountdown = document.getElementById("bigCountdown");
 const finalScreen = document.getElementById("newYearFinal");
 
 
-/* TOUCH SOUND + MUSIC UNLOCK */
+/* FIRST TOUCH - MUSIC */
 
 let musicUnlocked = false;
 let musicStarting = false;
 let audioContext = null;
 
 function playTouchSound(){
+
  try{
   const AudioContextClass =
    window.AudioContext || window.webkitAudioContext;
@@ -766,9 +786,6 @@ function playTouchSound(){
  }
 }
 
-
-/* FIRST SCREEN TOUCH - START MUSIC */
-
 function unlockMusic(){
 
  if(musicUnlocked || musicStarting) return;
@@ -782,10 +799,10 @@ function unlockMusic(){
  music.play().then(()=>{
   musicUnlocked = true;
   musicStarting = false;
-  console.log("Background music started");
+  console.log("Music started");
  }).catch(error=>{
   musicStarting = false;
-  console.log("Music playback blocked. Touch screen again:",error);
+  console.log("Music playback blocked. Touch again:",error);
  });
 }
 
@@ -808,8 +825,7 @@ function startCountdownCelebration(){
  finalScreen.classList.remove("show");
  bigCountdown.textContent = "10";
 
- /* START ONLY THE 3D VIDEO.
-    MUSIC IS ALREADY PLAYING - DO NOT RESTART IT. */
+ /* Only video starts here. Music is not restarted. */
 
  celebrationVideo.currentTime = 0;
 
@@ -871,12 +887,15 @@ updateTimer();
 setInterval(updateTimer,100);
 
 
-/* WHATSAPP SHARE */
+/* NATIVE SHARE SHEET */
 
-function sendWish(){
+async function sendWish(){
 
  const name = document.getElementById("sender").value.trim();
- const message = document.getElementById("wish").value.trim() || DEFAULT_WISH;
+
+ const message =
+  document.getElementById("wish").value.trim() || DEFAULT_WISH;
+
  const status = document.getElementById("status");
 
  if(!name){
@@ -885,12 +904,15 @@ function sendWish(){
   return;
  }
 
+ /* CREATE RECEIVER LINK */
+
  const shareURL = new URL(location.href);
 
  shareURL.search = "";
  shareURL.hash = "";
 
  shareURL.searchParams.set("sender",name);
+
  shareURL.searchParams.set(
   "wish",
   message === DEFAULT_WISH ? "default" : message
@@ -898,31 +920,47 @@ function sendWish(){
 
  const link = shareURL.toString();
 
- /* SIMPLE WHATSAPP MESSAGE */
+ /* SHORT MESSAGE IN SHARE SHEET */
 
  const shareText =
 `🎆 இனிய புத்தாண்டு நல்வாழ்த்துகள் – 2027! 🎆
 
-💌 அன்புடன் – VRPAIData
+💌 அன்புடன் – ${name}
 
-இந்தப் புத்தாண்டு உங்கள் வாழ்வில் மகிழ்ச்சி, ஆரோக்கியம், செல்வம், வெற்றி மற்றும் மனநிறைவைத் தரட்டும்.
+உங்களுக்கான சிறப்பு புத்தாண்டு வாழ்த்தைத் திறந்து பாருங்கள்!
 
-✨ உங்கள் கனவுகள் அனைத்தும் நனவாகட்டும்!
-✨ குடும்பத்தில் அன்பும் அமைதியும் நிலைக்கட்டும்!
+❤️ TEAM VRPAIData`;
 
-🎁 உங்களுக்கான சிறப்பு புத்தாண்டு வாழ்த்தைத் திறக்கவும்:
+ /* OPEN ANDROID NATIVE SHARE SHEET */
 
-${link}
+ if(navigator.share){
 
-❤️ அன்புடனும் நல்வாழ்த்துகளுடனும்,
-TEAM VRPAIData`;
+  try{
 
- status.textContent = "WhatsApp திறக்கப்படுகிறது...";
+   await navigator.share({
+    title:"Happy New Year 2027 | VRPAIData",
+    text:shareText,
+    url:link
+   });
 
- const whatsappURL =
-  "https://wa.me/?text=" + encodeURIComponent(shareText);
+   status.textContent = "❤️ நன்றி!";
 
- window.location.href = whatsappURL;
+  }catch(error){
+
+   if(error.name !== "AbortError"){
+    status.textContent = "பகிர முடியவில்லை. மீண்டும் முயற்சிக்கவும்.";
+    console.log(error);
+   }
+
+  }
+
+ }else{
+
+  status.textContent =
+   "இந்த Browser-ல் Native Share வசதி கிடைக்கவில்லை.";
+
+ }
+
 }
 
 document.getElementById("sendButton")
@@ -993,7 +1031,7 @@ function explode(x,y,type,hue){
   let vx=Math.cos(angle)*speed;
   let vy=Math.sin(angle)*speed;
 
-  switch(type%13){
+  switch(type%5){
 
    case 1:
     speed=3+Math.random();
@@ -1015,53 +1053,6 @@ function explode(x,y,type,hue){
    case 4:
     vx*=1.45;
     vy*=.68;
-    break;
-
-   case 5:
-    speed=1+Math.random()*4;
-    vx=Math.cos(angle)*speed;
-    vy=Math.sin(angle)*speed;
-    break;
-
-   case 6:
-    speed=(i%3===0?4.2:1.7);
-    vx=Math.cos(angle)*speed;
-    vy=Math.sin(angle)*speed;
-    break;
-
-   case 7:{
-    const a=Math.PI*2*Math.floor(i/4)/16;
-    vx=Math.cos(a)*speed;
-    vy=Math.sin(a)*speed;
-    break;
-   }
-
-   case 8:
-    vx*=1.25;
-    vy*=.7;
-    break;
-
-   case 9:
-    vx*=.7;
-    vy*=1.25;
-    break;
-
-   case 10:
-    speed=2+Math.sin(i*4)*.8;
-    vx=Math.cos(angle)*speed;
-    vy=Math.sin(angle)*speed;
-    break;
-
-   case 11:
-    speed=1+Math.random()*4.2;
-    vx=Math.cos(angle)*speed;
-    vy=Math.sin(angle)*speed;
-    break;
-
-   case 12:
-    speed=1.8+Math.random()*3.2;
-    vx=Math.cos(angle)*speed;
-    vy=Math.sin(angle)*speed;
     break;
   }
 
@@ -1248,7 +1239,9 @@ function startWelcome(){
 
  let wish=params.get("wish")||"default";
 
- if(wish==="default") wish=DEFAULT_WISH;
+ if(wish==="default"){
+  wish=DEFAULT_WISH;
+ }
 
  document.getElementById("showWish").textContent=wish;
  document.getElementById("showSender").textContent="💌 From: "+sender;
